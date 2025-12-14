@@ -16,12 +16,12 @@ const headerCounter = document.getElementById('question-counter');
 // ARRAY DELLE DOMANDE (QUI DEVI INCOLLARE LE TUE 150 DOMANDE)
 // ====================================================================
 let paniereCompleto =[
-    { 
+    {
         domanda: "Secondo il manuale AICA, quale delle seguenti è una comunicazione sincrona?", 
         corretta: "Videochiamata su Microsoft Teams", 
         errate: ["Email", "Messaggi vocali su WhatsApp", "Post su un forum"] 
     },
-    { 
+    {
         domanda: "Quale piattaforma è citata come esempio di messaggistica istantanea?", 
         corretta: "Slack", 
         errate: ["Google Docs", "Trello", "Canva"] 
