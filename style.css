@@ -100,10 +100,7 @@ h1, h2 {
 /* Area Risultati */
 #results-area {
     text-align: center;
-    padding: 30px;
-    border: 2px solid #28a745;
-    border-radius: 10px;
-    background-color: #e6ffed;
+    padding: 30px 0; /* Rimosso padding orizzontale per lasciare spazio al riepilogo */
     margin-top: 20px;
 }
 
@@ -117,4 +114,60 @@ h1, h2 {
     justify-content: space-around;
     gap: 15px;
     margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* ================================================= */
+/* STILI PER IL RIEPILOGO DETTAGLIATO (TABELLA)      */
+/* ================================================= */
+
+.summary-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.summary-container h3 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.summary-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9em; /* Rendi il testo della tabella più compatto */
+}
+
+.summary-container th, .summary-container td {
+    padding: 10px 12px; /* Padding ridotto */
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+.summary-container th {
+    background-color: #f0f8ff;
+    color: #333;
+    font-weight: bold;
+    border-top: 1px solid #ddd;
+}
+
+/* Stili per le colonne specifiche */
+.col-domanda {
+    width: 45%; /* Più spazio per la domanda */
+}
+.col-risposta-utente, .col-risposta-corretta {
+    width: 20%;
+}
+
+.row-correct {
+    background-color: #e6ffed; /* Verde chiaro per corretta */
+}
+
+.row-wrong {
+    background-color: #ffe6e6; /* Rosso chiaro per errata */
 }
