@@ -765,145 +765,158 @@ const paniereCompleto = [
     },
 ];
 
-// VARIABILI GLOBALI
-const NUM_DOMANDE_QUIZ = 30; // Numero di domande per ogni test
-const DURATA_MINUTI = 45; // Durata del test in minuti
-let testAttuale = [];
-let risposteUtente = [];
-let indiceCorrente = 0;
-let timerInterval;
-let tempoInizio;
+// ====================================================================
+// Variabili Globali
+// ====================================================================
 
-// Riferimenti DOM
+const NUM_DOMANDE_QUIZ = 30; // Numero di domande da estrarre
+const TEMPO_MASSIMO = 45 * 60; // Tempo in secondi (45 minuti)
+
 const quizArea = document.getElementById('quiz-area');
 const resultsArea = document.getElementById('results-area');
-const startButton = document.getElementById('start-button');
-const currentQuestionIndexSpan = document.getElementById('current-question-index');
-const timerSpan = document.getElementById('timer');
+const startScreen = document.getElementById('start-screen');
+const headerTimer = document.getElementById('timer-box');
+const headerCounter = document.getElementById('question-counter');
+
+let paniereCompleto = [
+    // [ATTENZIONE] Incolla qui le tue 150 domande nel formato JSON
+    // Esempio:
+    // {
+    //     "domanda": "Qual è il nome del fiume più lungo del mondo?",
+    //     "opzioni": ["Nilo", "Amazonas", "Mississippi", "Yangtze"],
+    //     "rispostaCorretta": "Nilo",
+    //     "area": "Area 1"
+    // },
+    // ... Altre 149 domande ...
+];
+
+let domandeSelezionate = []; // Le 30 domande per il quiz corrente
+let risposteUtente = []; // Array per tracciare le risposte date
+let indiceCorrente = 0; // Indice della domanda corrente
+
+let timerInterval;
+let tempoRimanente;
+let tempoInizio;
 
 // ====================================================================
-// 2. FUNZIONI DI GESTIONE DEL QUIZ
+// Funzioni Utili
 // ====================================================================
 
 /**
- * Avvia il timer di 45 minuti e gestisce lo scadere del tempo.
+ * Funzione per mescolare un array (algoritmo di Fisher-Yates).
+ * @param {Array} array - L'array da mescolare.
  */
-function avviaTimer() {
-    // Calcola il tempo di scadenza
-    const tempoScadenza = new Date().getTime() + DURATA_MINUTI * 60 * 1000;
-    
-    // Ferma eventuali timer precedenti
-    if (timerInterval) {
-        clearInterval(timerInterval);
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
-
-    timerInterval = setInterval(function() {
-        const now = new Date().getTime();
-        const distanza = tempoScadenza - now;
-
-        const minuti = Math.floor((distanza % (1000 * 60 * 60)) / (1000 * 60));
-        const secondi = Math.floor((distanza % (1000 * 60)) / 1000);
-        
-        // Formattazione per avere sempre due cifre
-        const minStr = String(minuti).padStart(2, '0');
-        const secStr = String(secondi).padStart(2, '0');
-
-        timerSpan.textContent = `${minStr}:${secStr}`;
-
-        // Quando il timer arriva a zero
-        if (distanza < 0) {
-            clearInterval(timerInterval);
-            timerSpan.textContent = "00:00";
-            terminaTest(true); // Termina per tempo scaduto
-        }
-    }, 1000);
 }
 
 /**
- * Genera un nuovo set casuale di 30 domande e avvia il quiz.
+ * Avvia il quiz: seleziona le domande e imposta l'interfaccia.
  */
 function generaNuovoTest() {
-    // 1. Estrazione casuale di 30 domande dal paniere
-    const paniereMescolato = [...paniereCompleto];
-    shuffleArray(paniereMescolato);
-    testAttuale = paniereMescolato.slice(0, NUM_DOMANDE_QUIZ);
+    if (paniereCompleto.length < NUM_DOMANDE_QUIZ) {
+        alert(`Errore: Il paniere deve contenere almeno ${NUM_DOMANDE_QUIZ} domande.`);
+        return;
+    }
 
-    // 2. Reset variabili di stato
+    // 1. Reset variabili
     risposteUtente = [];
     indiceCorrente = 0;
     
-    // 3. Avvia e visualizza il quiz
-    avviaTimer();
+    // 2. Mescola e seleziona le 30 domande
+    shuffleArray(paniereCompleto);
+    domandeSelezionate = paniereCompleto.slice(0, NUM_DOMANDE_QUIZ);
+
+    // 3. Mescola le opzioni di ogni domanda selezionata
+    domandeSelezionate.forEach(q => {
+        shuffleArray(q.opzioni);
+    });
+
+    // 4. Avvia l'interfaccia
+    startScreen.style.display = 'none';
+    resultsArea.style.display = 'none';
+    quizArea.style.display = 'block';
+
     tempoInizio = new Date().getTime();
+    avviaTimer();
     visualizzaDomanda(indiceCorrente);
 }
 
 /**
- * Visualizza la domanda corrente nell'interfaccia.
- * @param {number} index - L'indice della domanda da visualizzare.
+ * Gestisce il timer del quiz.
+ */
+function avviaTimer() {
+    clearInterval(timerInterval);
+    tempoRimanente = TEMPO_MASSIMO;
+
+    timerInterval = setInterval(() => {
+        const minuti = Math.floor(tempoRimanente / 60);
+        const secondi = tempoRimanente % 60;
+        
+        headerTimer.textContent = `Tempo: ${String(minuti).padStart(2, '0')}:${String(secondi).padStart(2, '0')}`;
+        
+        if (tempoRimanente <= 0) {
+            terminaTest(true); // True indica che il tempo è scaduto
+            return;
+        }
+        tempoRimanente--;
+    }, 1000);
+}
+
+/**
+ * Mostra la domanda all'indice specificato.
+ * @param {number} index - L'indice della domanda nell'array domandeSelezionate.
  */
 function visualizzaDomanda(index) {
-    if (index >= NUM_DOMANDE_QUIZ) {
+    if (index >= domandeSelezionate.length) {
         terminaTest();
         return;
     }
 
-    resultsArea.style.display = 'none';
-    quizArea.innerHTML = '';
+    const domanda = domandeSelezionate[index];
+    
+    headerCounter.textContent = `Domanda ${index + 1} / ${NUM_DOMANDE_QUIZ}`;
 
-    const domanda = testAttuale[index];
-    currentQuestionIndexSpan.textContent = index + 1;
-
-    // Prepara le 4 opzioni e le mescola
-    const options = [domanda.corretta, ...domanda.errate];
-    shuffleArray(options);
-
-    // Genera l'HTML della domanda e delle opzioni
     let html = `<div id="current-question">${domanda.domanda}</div>`;
     html += '<div class="options-container">';
     
-    options.forEach(optionText => {
-        // Aggiunge un data-attribute per identificare la risposta corretta al momento del click
-        const isCorrect = optionText === domanda.corretta;
-        html += `<button class="answer-option" data-correct="${isCorrect}" onclick="gestisciClickERisposta(this.textContent)">${optionText}</button>`;
+    domanda.opzioni.forEach(option => {
+        html += `<button class="answer-option" onclick="gestisciClickERisposta('${option.replace(/'/g, "\\'")}')">${option}</button>`;
     });
 
     html += '</div>';
     quizArea.innerHTML = html;
 }
 
+
 /**
- * Gestisce il click del mouse sulla risposta (seleziona E avanza).
- * @param {string} rispostaSelezionata - Il testo dell'opzione cliccata.
+ * Gestisce il click dell'utente su una risposta.
+ * @param {string} rispostaData - La risposta selezionata dall'utente.
  */
-function gestisciClickERisposta(rispostaSelezionata) {
-    // 1. Salva la risposta
-    const domandaCorrente = testAttuale[indiceCorrente];
-    const isCorretta = rispostaSelezionata === domandaCorrente.corretta;
-    
+function gestisciClickERisposta(rispostaData) {
+    const domandaCorrente = domandeSelezionate[indiceCorrente];
+    const rispostaCorretta = domandaCorrente.rispostaCorretta;
+    const esito = (rispostaData === rispostaCorretta);
+
+    // Registra la risposta
     risposteUtente.push({
         domanda: domandaCorrente.domanda,
-        rispostaData: rispostaSelezionata,
-        corretta: domandaCorrente.corretta,
-        esito: isCorretta
+        rispostaData: rispostaData,
+        corretta: rispostaCorretta,
+        esito: esito
     });
 
-    // 2. Avanza alla domanda successiva
+    // Passa alla domanda successiva
     indiceCorrente++;
-    
-    // Breve ritardo visivo per simulare l'avanzamento
-    setTimeout(() => {
-        if (indiceCorrente < NUM_DOMANDE_QUIZ) {
-            visualizzaDomanda(indiceCorrente);
-        } else {
-            terminaTest();
-        }
-    }, 150); 
+    visualizzaDomanda(indiceCorrente);
 }
 
+
 /**
- /**
- * Calcola il punteggio finale e mostra i risultati COMPLETI.
+ * Calcola il punteggio finale e mostra i risultati COMPLETI con riepilogo.
  * @param {boolean} [tempoScaduto=false] - Indica se il test è terminato per scadenza del tempo.
  */
 function terminaTest(tempoScaduto = false) {
@@ -941,11 +954,13 @@ function terminaTest(tempoScaduto = false) {
                 <tbody>
     `;
 
+    // Scorri solo le domande a cui l'utente ha risposto
     risposteUtente.forEach((risposta, index) => {
+        // La classe definisce il colore (verde se corretta, rosso se errata)
         const classeRiga = risposta.esito ? 'row-correct' : 'row-wrong';
         const simboloEsito = risposta.esito ? '✅ Corretta' : '❌ Errata';
         
-        // Mostra la risposta corretta solo se l'utente ha sbagliato
+        // Mostra la risposta corretta solo se l'utente ha sbagliato, altrimenti un trattino
         const rispostaCorretta = risposta.esito ? '-' : `<strong>${risposta.corretta}</strong>`;
         
         // Aggiunge la riga alla tabella
@@ -997,12 +1012,9 @@ function ripetiTestAttuale() {
     tempoInizio = new Date().getTime();
     visualizzaDomanda(indiceCorrente);
 }
-// ====================================================================
-// 3. INIZIALIZZAZIONE
-// ====================================================================
 
-// Associa la funzione al pulsante Inizia
-startButton.addEventListener('click', generaNuovoTest);
-
-// Stato iniziale del timer
-timerSpan.textContent = `${String(DURATA_MINUTI).padStart(2, '0')}:00`;
+// Inizializzazione (nasconde l'area quiz all'inizio)
+document.addEventListener('DOMContentLoaded', () => {
+    quizArea.style.display = 'none';
+    resultsArea.style.display = 'none';
+});
