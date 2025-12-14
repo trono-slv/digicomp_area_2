@@ -7,23 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <h1>Simulatore Esame DigComp 2.2</h1>
-        <h2>Area 2: Comunicazione e Collaborazione</h2>
-        
+        <header>
+            <h1>Simulatore Esame DigComp 2.2</h1>
+            <h2>Area 2: Comunicazione e Collaborazione</h2>
+        </header>
+
         <div id="quiz-header">
-            <p>Domanda: <span id="current-question-index">0</span> / 30</p>
-            <div id="timer-box">Tempo Rimanente: <span id="timer">45:00</span></div>
-        </div>
-        
-        <div id="quiz-area">
-           <button class="btn-primary" onclick="generaNuovoTest()">Inizia la Simulazione</button>
+            <div id="question-counter">Domanda: 0 / 30</div>
+            <div id="timer-box">Tempo Rimanente: 45:00</div>
         </div>
 
-        <div id="results-area" style="display:none;">
+        <div id="start-screen">
+            <p>Benvenuto nel simulatore del test DigComp 2.2 - Area 2.</p>
+            <p>Il test è composto da 30 domande a risposta multipla, da completare in 45 minuti.</p>
+            
+            <button class="btn-primary" onclick="generaNuovoTest()">Inizia la Simulazione</button>
+        </div>
+
+        <div id="quiz-area">
             </div>
 
+        <div id="results-area">
+            </div>
     </div>
 
     <script src="script.js"></script>
