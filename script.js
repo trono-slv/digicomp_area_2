@@ -767,7 +767,7 @@ let paniereCompleto = [
         domanda: "La netiquette e la gestione dell’identità digitale sono collegate perché:", 
         corretta: "Un comportamento rispettoso protegge anche la propria reputazione", 
         errate: ["Non hanno nessun legame", "Servono solo a limitare la libertà", "Sono obbligatorie solo a scuola"] 
-    },
+    }
 ];
 
 let domandeSelezionate = []; // Le 30 domande per il quiz corrente
