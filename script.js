@@ -902,7 +902,8 @@ function gestisciClickERisposta(rispostaSelezionata) {
 }
 
 /**
- * Calcola il punteggio finale e mostra i risultati.
+ /**
+ * Calcola il punteggio finale e mostra i risultati COMPLETI.
  * @param {boolean} [tempoScaduto=false] - Indica se il test è terminato per scadenza del tempo.
  */
 function terminaTest(tempoScaduto = false) {
@@ -923,6 +924,50 @@ function terminaTest(tempoScaduto = false) {
         tempoImpiegato = ` (Tempo impiegato: ${String(minuti).padStart(2, '0')}:${String(secondi).padStart(2, '0')})`;
     }
 
+    // --- GENERAZIONE RIEPILOGO DETTAGLIATO ---
+    let riepilogoHTML = `
+        <div class="summary-container">
+            <h3>Riepilogo Risposte Date</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th class="col-domanda">Domanda</th>
+                        <th class="col-risposta-utente">La Tua Risposta</th>
+                        <th class="col-risposta-corretta">Risposta Corretta</th>
+                        <th>Esito</th>
+                    </tr>
+                </thead>
+                <tbody>
+    `;
+
+    risposteUtente.forEach((risposta, index) => {
+        const classeRiga = risposta.esito ? 'row-correct' : 'row-wrong';
+        const simboloEsito = risposta.esito ? '✅ Corretta' : '❌ Errata';
+        
+        // Mostra la risposta corretta solo se l'utente ha sbagliato
+        const rispostaCorretta = risposta.esito ? '-' : `<strong>${risposta.corretta}</strong>`;
+        
+        // Aggiunge la riga alla tabella
+        riepilogoHTML += `
+            <tr class="${classeRiga}">
+                <td>${index + 1}</td>
+                <td class="col-domanda">${risposta.domanda}</td>
+                <td class="col-risposta-utente">${risposta.rispostaData}</td>
+                <td class="col-risposta-corretta">${rispostaCorretta}</td>
+                <td>${simboloEsito}</td>
+            </tr>
+        `;
+    });
+
+    riepilogoHTML += `
+                </tbody>
+            </table>
+        </div>
+    `;
+    // --- FINE GENERAZIONE RIEPILOGO ---
+
+
     // Visualizzazione Risultati
     resultsArea.innerHTML = `
         <h3>TEST TERMINATO!</h3>
@@ -934,6 +979,8 @@ function terminaTest(tempoScaduto = false) {
             <button class="btn-primary" onclick="ripetiTestAttuale()">Ripeti Test</button>
             <button class="btn-primary" onclick="generaNuovoTest()">Genera Nuovo Test</button>
         </div>
+        
+        ${riepilogoHTML}
     `;
     
     // Reimposta l'indice per il 'Ripeti Test'
@@ -950,7 +997,6 @@ function ripetiTestAttuale() {
     tempoInizio = new Date().getTime();
     visualizzaDomanda(indiceCorrente);
 }
-
 // ====================================================================
 // 3. INIZIALIZZAZIONE
 // ====================================================================
