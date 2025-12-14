@@ -100,7 +100,7 @@ h1, h2 {
 /* Area Risultati */
 #results-area {
     text-align: center;
-    padding: 30px 0; /* Rimosso padding orizzontale per lasciare spazio al riepilogo */
+    padding: 30px 0;
     margin-top: 20px;
 }
 
@@ -139,11 +139,11 @@ h1, h2 {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
-    font-size: 0.9em; /* Rendi il testo della tabella più compatto */
+    font-size: 0.9em;
 }
 
 .summary-container th, .summary-container td {
-    padding: 10px 12px; /* Padding ridotto */
+    padding: 10px 12px;
     text-align: left;
     border-bottom: 1px solid #eee;
     vertical-align: top;
@@ -158,16 +158,18 @@ h1, h2 {
 
 /* Stili per le colonne specifiche */
 .col-domanda {
-    width: 45%; /* Più spazio per la domanda */
+    width: 45%; 
 }
 .col-risposta-utente, .col-risposta-corretta {
     width: 20%;
 }
 
+/* COLORE VERDE per risposte CORRETTE */
 .row-correct {
-    background-color: #e6ffed; /* Verde chiaro per corretta */
+    background-color: #e6ffed; /* Sfondo verde chiaro */
 }
 
+/* COLORE ROSSO per risposte ERRATE */
 .row-wrong {
-    background-color: #ffe6e6; /* Rosso chiaro per errata */
+    background-color: #ffe6e6; /* Sfondo rosso chiaro */
 }
