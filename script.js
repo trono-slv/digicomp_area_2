@@ -15,7 +15,7 @@ const headerCounter = document.getElementById('question-counter');
 // ====================================================================
 // ARRAY DELLE DOMANDE (QUI DEVI INCOLLARE LE TUE 150 DOMANDE)
 // ====================================================================
-let paniereCompleto = [
+let paniereCompleto =[
     { 
         domanda: "Secondo il manuale AICA, quale delle seguenti è una comunicazione sincrona?", 
         corretta: "Videochiamata su Microsoft Teams", 
