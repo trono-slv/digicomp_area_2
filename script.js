@@ -16,895 +16,959 @@ const headerCounter = document.getElementById('question-counter');
 // ARRAY DELLE DOMANDE (QUI SONO STATE INCOLLATE LE DOMANDE FORNITE DALL'UTENTE)
 // ====================================================================
 let paniereCompleto = [
-    {
-        "domanda": "Secondo il manuale AICA, quale delle seguenti è una comunicazione sincrona?",
-        "opzioni": ["Videochiamata su Microsoft Teams", "Email", "Messaggi vocali su WhatsApp", "Post su un forum"],
-        "rispostaCorretta": "Videochiamata su Microsoft Teams",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è citata come esempio di messaggistica istantanea?",
-        "opzioni": ["Slack", "Google Docs", "Trello", "Canva"],
-        "rispostaCorretta": "Slack",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La comunicazione asincrona si caratterizza per:",
-        "opzioni": ["Non richiedere la contemporaneità delle parti", "Presenza contemporanea obbligatoria", "Necessità di essere online nello stesso momento", "Uso esclusivo di video"],
-        "rispostaCorretta": "Non richiedere la contemporaneità delle parti",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale software di videoconferenza è espressamente menzionato nel manuale?",
-        "opzioni": ["Zoom", "OneDrive", "Asana", "Figma"],
-        "rispostaCorretta": "Zoom",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale social network è citato tra le community online?",
-        "opzioni": ["Reddit", "Microsoft Word", "Excel", "PowerPoint"],
-        "rispostaCorretta": "Reddit",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un obiettivo principale della competenza 2.1 è:",
-        "opzioni": ["Risolvere problemi e rispondere rapidamente a domande", "Installare hardware", "Creare siti web", "Analizzare dati statistici"],
-        "rispostaCorretta": "Risolvere problemi e rispondere rapidamente a domande",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La collaborazione in ambienti digitali supera barriere:",
-        "opzioni": ["Fisiche, geografiche e temporali", "Solo fisiche", "Solo culturali", "Nessuna"],
-        "rispostaCorretta": "Fisiche, geografiche e temporali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale dei seguenti è un esempio di strumento asincrono?",
-        "opzioni": ["Email", "Chat in tempo reale", "Riunioni virtuali live", "Videochiamata"],
-        "rispostaCorretta": "Email",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma per videoconferenze è elencata nel manuale?",
-        "opzioni": ["Google Meet", "Trello", "OneDrive", "Canva"],
-        "rispostaCorretta": "Google Meet",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.1 richiede di considerare:",
-        "opzioni": ["La diversità culturale e generazionale", "Solo la diversità generazionale", "Nessuna diversità", "Solo la diversità culturale"],
-        "rispostaCorretta": "La diversità culturale e generazionale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per le riunioni virtuali?",
-        "opzioni": ["Microsoft Teams", "Excel", "PowerPoint", "Word"],
-        "rispostaCorretta": "Microsoft Teams",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La comunicazione digitale favorisce:",
-        "opzioni": ["L’interazione sociale e il networking", "L’isolamento totale", "La riduzione delle relazioni", "Solo comunicazioni scritte"],
-        "rispostaCorretta": "L’interazione sociale e il networking",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Esempio di piattaforma di messaggistica istantanea citata:",
-        "opzioni": ["WhatsApp", "Google Drive", "Asana", "Miro"],
-        "rispostaCorretta": "WhatsApp",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale social network è menzionato per il networking professionale?",
-        "opzioni": ["LinkedIn", "Paint", "Notepad", "Calcolatrice"],
-        "rispostaCorretta": "LinkedIn",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un esempio di comunicazione asincrona è:",
-        "opzioni": ["Messaggi vocali", "Chat live", "Videoconferenza", "Riunione su Teams"],
-        "rispostaCorretta": "Messaggi vocali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.1 serve a:",
-        "opzioni": ["Capire quali strumenti sono più appropriati in un determinato contesto", "Usare sempre lo stesso strumento", "Evitare le tecnologie", "Limitarsi alla posta cartacea"],
-        "rispostaCorretta": "Capire quali strumenti sono più appropriati in un determinato contesto",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è citata per le community online?",
-        "opzioni": ["Facebook", "Blocco note", "Registro di Windows", "Pannello di controllo"],
-        "rispostaCorretta": "Facebook",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La collaborazione digitale permette di:",
-        "opzioni": ["Superare barriere fisiche, geografiche e temporali", "Aumentare le distanze", "Rendere tutto più lento", "Limitare le interazioni"],
-        "rispostaCorretta": "Superare barriere fisiche, geografiche e temporali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Esempio di software di videoconferenza citato:",
-        "opzioni": ["Google Meet", "Word", "Excel", "Paint"],
-        "rispostaCorretta": "Google Meet",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un obiettivo della competenza 2.1 è:",
-        "opzioni": ["Favorire l’interazione sociale e il networking", "Ridurre le relazioni personali", "Eliminare le comunicazioni", "Limitarsi a testi"],
-        "rispostaCorretta": "Favorire l’interazione sociale e il networking",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per le riunioni virtuali?",
-        "opzioni": ["Microsoft Teams", "Calcolatrice", "Blocco note", "Esplora file"],
-        "rispostaCorretta": "Microsoft Teams",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La comunicazione in ambienti digitali è essenziale per:",
-        "opzioni": ["Il mondo del lavoro moderno e l’istruzione a distanza", "Solo l’intrattenimento", "Evitare ogni contatto", "Limitarsi alla carta"],
-        "rispostaCorretta": "Il mondo del lavoro moderno e l’istruzione a distanza",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Esempio di piattaforma di messaggistica istantanea:",
-        "opzioni": ["Slack", "Google Sheets", "OneNote", "Paint"],
-        "rispostaCorretta": "Slack",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.1 include:",
-        "opzioni": ["Interagire tenendo conto della diversità culturale e generazionale", "Ignorare ogni differenza", "Limitarsi a una sola cultura", "Evitare le generazioni diverse"],
-        "rispostaCorretta": "Interagire tenendo conto della diversità culturale e generazionale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale dei seguenti è un esempio di comunicazione sincrona?",
-        "opzioni": ["Chat su WhatsApp", "Forum", "Email", "Messaggi vocali"],
-        "rispostaCorretta": "Chat su WhatsApp",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Il manuale cita come social network per community:",
-        "opzioni": ["Reddit", "Esplora file", "Pannello di controllo", "Cestino"],
-        "rispostaCorretta": "Reddit",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La collaborazione digitale riguarda:",
-        "opzioni": ["Il lavoro collettivo attraverso piattaforme digitali", "Il lavoro solo individuale", "L’uso di carta", "L’isolamento"],
-        "rispostaCorretta": "Il lavoro collettivo attraverso piattaforme digitali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è citata per le videoconferenze?",
-        "opzioni": ["Zoom", "Word", "Excel", "Paint"],
-        "rispostaCorretta": "Zoom",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un obiettivo è:",
-        "opzioni": ["Condividere informazioni e aggiornamenti", "Nascondere informazioni", "Eliminare aggiornamenti", "Limitare la condivisione"],
-        "rispostaCorretta": "Condividere informazioni e aggiornamenti",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.1 è utile per:",
-        "opzioni": ["Gestire relazioni personali e professionali", "Evitare ogni relazione", "Limitarsi a una sola persona", "Ignorare il contesto"],
-        "rispostaCorretta": "Gestire relazioni personali e professionali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Secondo il manuale AICA, quale delle seguenti è una forma di condivisione di documenti in tempo reale?",
-        "opzioni": ["Google Docs", "Inviare file per email", "Salvare su chiavetta USB", "Stampare il documento"],
-        "rispostaCorretta": "Google Docs",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è citata per la gestione dei progetti con suddivisione di compiti?",
-        "opzioni": ["Trello", "Zoom", "Canva", "WhatsApp"],
-        "rispostaCorretta": "Trello",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La condivisione attraverso le tecnologie digitali permette di:",
-        "opzioni": ["Monitorare lo stato di avanzamento dei compiti", "Lavorare sempre in modo isolato", "Ridurre la collaborazione", "Eliminare ogni traccia di lavoro"],
-        "rispostaCorretta": "Monitorare lo stato di avanzamento dei compiti",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è menzionato per la co-creazione di contenuti multimediali?",
-        "opzioni": ["Figma", "Asana", "Microsoft Teams", "Gmail"],
-        "rispostaCorretta": "Figma",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale delle seguenti è una forma di collaborazione digitale citata nel manuale?",
-        "opzioni": ["Condivisione di documenti", "Riunioni solo di persona", "Stampa collettiva", "Lavagna fisica"],
-        "rispostaCorretta": "Condivisione di documenti",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è elencata per la gestione dei progetti?",
-        "opzioni": ["Jira", "Miro", "Reddit", "Facebook"],
-        "rispostaCorretta": "Jira",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.2 riguarda principalmente:",
-        "opzioni": ["Condividere informazioni attraverso le tecnologie digitali", "Creare siti web", "Installare sistemi operativi", "Fare backup su CD"],
-        "rispostaCorretta": "Condividere informazioni attraverso le tecnologie digitali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per lo sviluppo collettivo di idee o materiali?",
-        "opzioni": ["Canva", "Excel", "Word", "Paint"],
-        "rispostaCorretta": "Canva",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è menzionata per la condivisione di file in tempo reale?",
-        "opzioni": ["OneDrive", "Posta certificata", "Fax", "Telegramma"],
-        "rispostaCorretta": "OneDrive",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La collaborazione digitale include:",
-        "opzioni": ["Suddivisione di compiti e monitoraggio dello stato di avanzamento", "Lavoro sempre individuale", "Eliminazione dei file condivisi", "Nessun controllo sui progressi"],
-        "rispostaCorretta": "Suddivisione di compiti e monitoraggio dello stato di avanzamento",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per la co-creazione di contenuti?",
-        "opzioni": ["Miro", "Blocco note", "Calcolatrice", "Esplora file"],
-        "rispostaCorretta": "Miro",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è elencata per la gestione dei progetti?",
-        "opzioni": ["Asana", "LinkedIn", "YouTube", "Instagram"],
-        "rispostaCorretta": "Asana",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La condivisione di documenti in tempo reale avviene su:",
-        "opzioni": ["Google Docs", "Carta e penna", "Lavagna fisica", "Fax"],
-        "rispostaCorretta": "Google Docs",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per la co-creazione di contenuti multimediali?",
-        "opzioni": ["Canva", "Registro di Windows", "Pannello di controllo", "Cestino"],
-        "rispostaCorretta": "Canva",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.2 permette di:",
-        "opzioni": ["Raggiungere obiettivi comuni attraverso piattaforme digitali", "Lavorare sempre da soli", "Evitare ogni condivisione", "Limitarsi alla carta"],
-        "rispostaCorretta": "Raggiungere obiettivi comuni attraverso piattaforme digitali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è menzionata per il monitoraggio dello stato di avanzamento?",
-        "opzioni": ["Trello", "Gmail", "Outlook", "Telegram"],
-        "rispostaCorretta": "Trello",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La co-creazione di contenuti include:",
-        "opzioni": ["Sviluppo collettivo di idee o materiali multimediali", "Lavoro individuale forzato", "Eliminazione dei contributi altrui", "Nessuna modifica condivisa"],
-        "rispostaCorretta": "Sviluppo collettivo di idee o materiali multimediali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per la gestione dei progetti?",
-        "opzioni": ["Jira", "Facebook", "Messenger", "TikTok"],
-        "rispostaCorretta": "Jira",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La condivisione digitale serve a:",
-        "opzioni": ["Lavorare insieme su file condivisi in tempo reale", "Nascondere i documenti", "Limitare l’accesso a tutti", "Eliminare la collaborazione"],
-        "rispostaCorretta": "Lavorare insieme su file condivisi in tempo reale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è elencata per la co-creazione?",
-        "opzioni": ["Figma", "Paint", "Blocco note", "Calcolatrice"],
-        "rispostaCorretta": "Figma",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La suddivisione di compiti avviene tipicamente su:",
-        "opzioni": ["Trello", "Email", "Posta cartacea", "Telegramma"],
-        "rispostaCorretta": "Trello",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per la condivisione di documenti?",
-        "opzioni": ["Microsoft OneDrive", "Fax", "Lettera", "Piccione viaggiatore"],
-        "rispostaCorretta": "Microsoft OneDrive",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La collaborazione digitale riguarda il lavoro collettivo per:",
-        "opzioni": ["Raggiungere obiettivi comuni", "Lavorare in isolamento", "Evitare ogni contatto", "Limitarsi a una persona"],
-        "rispostaCorretta": "Raggiungere obiettivi comuni",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è menzionata per la co-creazione di materiali?",
-        "opzioni": ["Miro", "Excel", "Word", "PowerPoint"],
-        "rispostaCorretta": "Miro",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La gestione dei progetti include il monitoraggio dello stato di avanzamento su:",
-        "opzioni": ["Asana", "WhatsApp", "SMS", "Telefono fisso"],
-        "rispostaCorretta": "Asana",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per la condivisione in tempo reale?",
-        "opzioni": ["Google Docs", "Stampa", "Lavagna", "Carta"],
-        "rispostaCorretta": "Google Docs",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La co-creazione di contenuti multimediali avviene su:",
-        "opzioni": ["Canva", "Blocco note", "Registro", "Cestino"],
-        "rispostaCorretta": "Canva",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.2 è essenziale per:",
-        "opzioni": ["Il lavoro collettivo attraverso piattaforme digitali", "Il lavoro individuale forzato", "L’isolamento digitale", "L’eliminazione della collaborazione"],
-        "rispostaCorretta": "Il lavoro collettivo attraverso piattaforme digitali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è citata per la suddivisione di compiti?",
-        "opzioni": ["Trello", "Facebook", "Instagram", "TikTok"],
-        "rispostaCorretta": "Trello",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La condivisione digitale permette di lavorare insieme su file:",
-        "opzioni": ["In tempo reale", "Solo uno alla volta con 24 ore di ritardo", "Mai contemporaneamente", "Solo stampando"],
-        "rispostaCorretta": "In tempo reale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.3 riguarda principalmente:",
-        "opzioni": ["Partecipare alla società attraverso i servizi digitali pubblici e privati", "Creare videogiochi", "Limitarsi alla comunicazione privata", "Evitare ogni forma di cittadinanza"],
-        "rispostaCorretta": "Partecipare alla società attraverso i servizi digitali pubblici e privati",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale delle seguenti è un esempio di cittadinanza attiva digitale citato nel manuale?",
-        "opzioni": ["Firmare petizioni online", "Inviare lettere cartacee", "Telefonare agli uffici pubblici", "Andare di persona agli sportelli"],
-        "rispostaCorretta": "Firmare petizioni online",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "I servizi digitali pubblici comprendono:",
-        "opzioni": ["SPID, CIE, PagoPA e servizi comunali online", "Solo acquisti online su Amazon", "Solo social network", "Solo giochi online"],
-        "rispostaCorretta": "SPID, CIE, PagoPA e servizi comunali online",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è menzionata per i servizi della Pubblica Amministrazione?",
-        "opzioni": ["PagoPA", "TikTok", "Instagram", "Snapchat"],
-        "rispostaCorretta": "PagoPA",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La cittadinanza digitale attiva include:",
-        "opzioni": ["Partecipare a consultazioni pubbliche online", "Ignorare ogni avviso pubblico", "Limitarsi alla TV", "Non votare mai"],
-        "rispostaCorretta": "Partecipare a consultazioni pubbliche online",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale identità elettronica è citata nel manuale italiano?",
-        "opzioni": ["SPID", "Facebook Login", "Google Account", "Apple ID"],
-        "rispostaCorretta": "SPID",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un esempio di servizio privato digitale per la cittadinanza è:",
-        "opzioni": ["Home banking", "Solo giochi", "Solo social", "Solo email personali"],
-        "rispostaCorretta": "Home banking",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.3 serve a:",
-        "opzioni": ["Esercitare i propri diritti e doveri anche online", "Evitare ogni responsabilità digitale", "Limitarsi alla carta", "Non partecipare mai alla società"],
-        "rispostaCorretta": "Esercitare i propri diritti e doveri anche online",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale carta elettronica è menzionata per l’accesso ai servizi pubblici?",
-        "opzioni": ["Carta d’Identità Elettronica (CIE)", "Carta di credito normale", "Tessera sanitaria cartacea", "Biglietto dell’autobus"],
-        "rispostaCorretta": "Carta d’Identità Elettronica (CIE)",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La partecipazione attiva alla società digitale comprende:",
-        "opzioni": ["Firmare petizioni su piattaforme dedicate", "Non firmare mai nulla", "Firmare solo su carta", "Inviare fax"],
-        "rispostaCorretta": "Firmare petizioni su piattaforme dedicate",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale sistema di pagamento digitale pubblico è citato?",
-        "opzioni": ["PagoPA", "PayPal", "Satispay", "Revolut"],
-        "rispostaCorretta": "PagoPA",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La cittadinanza digitale include l’uso di servizi:",
-        "opzioni": ["Sia pubblici che privati", "Solo pubblici", "Solo privati", "Nessuno"],
-        "rispostaCorretta": "Sia pubblici che privati",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un esempio di consultazione pubblica online è:",
-        "opzioni": ["Partecipare a sondaggi del Comune sul portale istituzionale", "Commentare post su Instagram", "Mettere like su Facebook", "Guardare storie"],
-        "rispostaCorretta": "Partecipare a sondaggi del Comune sul portale istituzionale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.3 promuove:",
-        "opzioni": ["La partecipazione attiva e consapevole alla società digitale", "L’isolamento digitale", "Il rifiuto delle tecnologie", "L’uso solo per divertimento"],
-        "rispostaCorretta": "La partecipazione attiva e consapevole alla società digitale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per l’identità digitale italiana?",
-        "opzioni": ["SPID", "Twitter", "WhatsApp", "Telegram"],
-        "rispostaCorretta": "SPID",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "L’accesso ai servizi della PA avviene spesso tramite:",
-        "opzioni": ["CIE", "Lettera raccomandata", "Fax", "Piccione viaggiatore"],
-        "rispostaCorretta": "CIE",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un esempio di servizio pubblico digitale è:",
-        "opzioni": ["Prenotazione CUP online", "Solo Netflix", "Solo Spotify", "Solo YouTube"],
-        "rispostaCorretta": "Prenotazione CUP online",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La cittadinanza attiva digitale comprende:",
-        "opzioni": ["Segnalazioni al Comune tramite app o portale", "Telefonare sempre", "Andare sempre di persona", "Non segnalare mai"],
-        "rispostaCorretta": "Segnalazioni al Comune tramite app o portale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Il manuale cita come esempio di pagamento digitale pubblico:",
-        "opzioni": ["PagoPA", "Amazon Pay", "Google Pay", "Apple Pay"],
-        "rispostaCorretta": "PagoPA",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Partecipare a petizioni online è considerato:",
-        "opzioni": ["Cittadinanza attiva digitale", "Spam", "Gioco", "Perdita di tempo"],
-        "rispostaCorretta": "Cittadinanza attiva digitale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "L’uso di SPID serve per:",
-        "opzioni": ["Accedere ai servizi della Pubblica Amministrazione", "Solo social network", "Solo giochi", "Solo email"],
-        "rispostaCorretta": "Accedere ai servizi della Pubblica Amministrazione",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.3 include anche i servizi:",
-        "opzioni": ["Bancari e assicurativi online", "Solo pubblici", "Solo privati", "Nessuno"],
-        "rispostaCorretta": "Bancari e assicurativi online",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un esempio di partecipazione civica digitale è:",
-        "opzioni": ["Compilare moduli online per il Comune", "Scrivere lettere a mano", "Telefonare", "Andare allo sportello"],
-        "rispostaCorretta": "Compilare moduli online per il Comune",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La CIE (Carta d’Identità Elettronica) permette:",
-        "opzioni": ["L’accesso autenticato ai servizi pubblici online", "Solo foto tessera", "Solo residenza", "Solo voto cartaceo"],
-        "rispostaCorretta": "L’accesso autenticato ai servizi pubblici online",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La cittadinanza digitale attiva significa:",
-        "opzioni": ["Essere parte attiva della società anche online", "Essere passivi", "Non partecipare mai", "Limitarsi alla TV"],
-        "rispostaCorretta": "Essere parte attiva della società anche online",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale sistema di identità digitale è citato?",
-        "opzioni": ["SPID", "Facebook", "Instagram", "TikTok"],
-        "rispostaCorretta": "SPID",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un esempio di servizio privato per la cittadinanza digitale è:",
-        "opzioni": ["Home banking", "Solo giochi", "Solo social", "Solo video"],
-        "rispostaCorretta": "Home banking",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La partecipazione a consultazioni pubbliche online è:",
-        "opzioni": ["Cittadinanza attiva digitale", "Spam", "Gioco", "Perdita di tempo"],
-        "rispostaCorretta": "Cittadinanza attiva digitale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "PagoPA è utilizzato per:",
-        "opzioni": ["Pagamenti verso la Pubblica Amministrazione", "Solo acquisti su Amazon", "Solo Netflix", "Solo Spotify"],
-        "rispostaCorretta": "Pagamenti verso la Pubblica Amministrazione",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.3 promuove l’uso consapevole di servizi:",
-        "opzioni": ["Digitali pubblici e privati", "Solo cartacei", "Solo telefonici", "Nessuno"],
-        "rispostaCorretta": "Digitali pubblici e privati",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.4 riguarda principalmente:",
-        "opzioni": ["Collaborare attraverso le tecnologie digitali", "Creare videogiochi", "Limitarsi alla comunicazione privata", "Evitare ogni forma di lavoro di gruppo"],
-        "rispostaCorretta": "Collaborare attraverso le tecnologie digitali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale delle seguenti è una forma di collaborazione digitale citata nel manuale?",
-        "opzioni": ["Co-creazione di contenuti", "Scrivere lettere a mano", "Telefonare senza video", "Incontrarsi solo di persona"],
-        "rispostaCorretta": "Co-creazione di contenuti",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è menzionata per la co-creazione di contenuti multimediali?",
-        "opzioni": ["Canva", "Blocco note", "Calcolatrice", "Paint"],
-        "rispostaCorretta": "Canva",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La gestione dei progetti con suddivisione di compiti avviene tipicamente su:",
-        "opzioni": ["Trello", "WhatsApp", "SMS", "Fax"],
-        "rispostaCorretta": "Trello",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per lo sviluppo collettivo di idee?",
-        "opzioni": ["Miro", "Excel", "Word", "PowerPoint"],
-        "rispostaCorretta": "Miro",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La collaborazione digitale permette di:",
-        "opzioni": ["Raggiungere obiettivi comuni attraverso piattaforme digitali", "Lavorare sempre in isolamento", "Eliminare ogni contributo altrui", "Limitarsi a testi scritti"],
-        "rispostaCorretta": "Raggiungere obiettivi comuni attraverso piattaforme digitali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è elencata per la gestione dei progetti?",
-        "opzioni": ["Asana", "Facebook", "Instagram", "TikTok"],
-        "rispostaCorretta": "Asana",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La co-creazione di materiali multimediali avviene su:",
-        "opzioni": ["Figma", "Registro di Windows", "Pannello di controllo", "Cestino"],
-        "rispostaCorretta": "Figma",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per il monitoraggio dello stato di avanzamento?",
-        "opzioni": ["Jira", "Gmail", "Outlook", "Telegram"],
-        "rispostaCorretta": "Jira",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La collaborazione digitale include:",
-        "opzioni": ["Condivisione di documenti in tempo reale", "Stampa collettiva", "Lavagna fisica", "Nessuna condivisione"],
-        "rispostaCorretta": "Condivisione di documenti in tempo reale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è menzionata per la co-creazione di contenuti?",
-        "opzioni": ["Canva", "Paint", "Blocco note", "Calcolatrice"],
-        "rispostaCorretta": "Canva",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La suddivisione di compiti è tipica di:",
-        "opzioni": ["Trello", "Email", "Posta cartacea", "Piccione viaggiatore"],
-        "rispostaCorretta": "Trello",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per lo sviluppo collettivo di idee?",
-        "opzioni": ["Miro", "Excel", "Word", "PowerPoint"],
-        "rispostaCorretta": "Miro",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.4 è essenziale per:",
-        "opzioni": ["Il lavoro collettivo attraverso piattaforme digitali", "Il lavoro individuale forzato", "L’isolamento digitale", "L’eliminazione della collaborazione"],
-        "rispostaCorretta": "Il lavoro collettivo attraverso piattaforme digitali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è elencata per la gestione dei progetti?",
-        "opzioni": ["Asana", "LinkedIn", "YouTube", "Instagram"],
-        "rispostaCorretta": "Asana",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La co-creazione di contenuti multimediali avviene su:",
-        "opzioni": ["Figma", "Blocco note", "Registro", "Cestino"],
-        "rispostaCorretta": "Figma",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Il monitoraggio dello stato di avanzamento è possibile su:",
-        "opzioni": ["Jira", "WhatsApp", "SMS", "Telefono fisso"],
-        "rispostaCorretta": "Jira",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La collaborazione digitale permette di lavorare insieme su file:",
-        "opzioni": ["In tempo reale", "Solo uno alla volta con ritardo", "Mai contemporaneamente", "Solo stampando"],
-        "rispostaCorretta": "In tempo reale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per la co-creazione di materiali?",
-        "opzioni": ["Canva", "Paint", "Blocco note", "Calcolatrice"],
-        "rispostaCorretta": "Canva",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La suddivisione di compiti avviene su piattaforme come:",
-        "opzioni": ["Trello", "Facebook", "Instagram", "TikTok"],
-        "rispostaCorretta": "Trello",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La gestione dei progetti include il monitoraggio su:",
-        "opzioni": ["Asana", "Gmail", "Outlook", "Telegram"],
-        "rispostaCorretta": "Asana",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La co-creazione di contenuti avviene su:",
-        "opzioni": ["Miro", "Excel", "Word", "PowerPoint"],
-        "rispostaCorretta": "Miro",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale piattaforma è citata per la collaborazione su design?",
-        "opzioni": ["Figma", "Blocco note", "Registro", "Cestino"],
-        "rispostaCorretta": "Figma",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.4 permette di:",
-        "opzioni": ["Raggiungere obiettivi comuni in modo collettivo", "Lavorare sempre da soli", "Evitare ogni contatto", "Limitarsi a una persona"],
-        "rispostaCorretta": "Raggiungere obiettivi comuni in modo collettivo",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Il lavoro collettivo attraverso piattaforme digitali è l’obiettivo di:",
-        "opzioni": ["2.4", "Solo comunicazione individuale", "Solo cittadinanza", "Solo netiquette"],
-        "rispostaCorretta": "2.4",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La co-creazione di materiali multimediali è possibile su:",
-        "opzioni": ["Canva", "Paint", "Blocco note", "Calcolatrice"],
-        "rispostaCorretta": "Canva",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La suddivisione di compiti è tipica di:",
-        "opzioni": ["Trello", "Email", "SMS", "Fax"],
-        "rispostaCorretta": "Trello",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La collaborazione digitale supera barriere:",
-        "opzioni": ["Fisiche, geografiche e temporali", "Solo fisiche", "Solo culturali", "Nessuna"],
-        "rispostaCorretta": "Fisiche, geografiche e temporali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Quale strumento è citato per la gestione dei progetti?",
-        "opzioni": ["Jira", "Facebook", "Instagram", "TikTok"],
-        "rispostaCorretta": "Jira",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.4 è fondamentale per:",
-        "opzioni": ["Il lavoro di gruppo in ambiente digitale", "Il lavoro individuale forzato", "L’isolamento digitale", "L’eliminazione della collaborazione"],
-        "rispostaCorretta": "Il lavoro di gruppo in ambiente digitale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La netiquette è definita nel manuale come:",
-        "opzioni": ["L’insieme di regole di comportamento rispettoso online", "La libertà di dire qualsiasi cosa", "L’uso obbligatorio di maiuscole", "Inviare spam"],
-        "rispostaCorretta": "L’insieme di regole di comportamento rispettoso online",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "È buona netiquette:",
-        "opzioni": ["Usare un linguaggio chiaro, cortese e rispettoso", "Scrivere tutto in MAIUSCOLO", "Insultare gli altri utenti", "Inviare catene di Sant’Antonio"],
-        "rispostaCorretta": "Usare un linguaggio chiaro, cortese e rispettoso",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Secondo il manuale, perché è sconsigliato scrivere in maiuscolo?",
-        "opzioni": ["Equivale a urlare", "È più elegante", "Risparmia inchiostro", "È più veloce"],
-        "rispostaCorretta": "Equivale a urlare",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un esempio di netiquette è:",
-        "opzioni": ["Citare correttamente le fonti quando si condivide contenuto altrui", "Copiare testi senza indicare l’autore", "Inviare lo stesso messaggio a centinaia di persone", "Usare emoji aggressive"],
-        "rispostaCorretta": "Citare correttamente le fonti quando si condivide contenuto altrui",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.5 serve a:",
-        "opzioni": ["Evitare malintesi e conflitti nelle comunicazioni digitali", "Creare conflitti intenzionali", "Ignorare le regole", "Limitarsi a testi brevi"],
-        "rispostaCorretta": "Evitare malintesi e conflitti nelle comunicazioni digitali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "È buona netiquette:",
-        "opzioni": ["Rileggere il messaggio prima di inviarlo", "Inviare senza controllare", "Usare sempre abbreviazioni incomprensibili", "Rispondere dopo mesi"],
-        "rispostaCorretta": "Rileggere il messaggio prima di inviarlo",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.6 riguarda principalmente:",
-        "opzioni": ["Gestire la propria presenza, identità e reputazione digitale", "Creare profili falsi", "Condividere tutto pubblicamente", "Non avere nessun profilo online"],
-        "rispostaCorretta": "Gestire la propria presenza, identità e reputazione digitale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un rischio dell’identità digitale è:",
-        "opzioni": ["La permanenza delle informazioni online", "La cancellazione immediata di tutto", "L’assenza di tracce", "L’impossibilità di modificare"],
-        "rispostaCorretta": "La permanenza delle informazioni online",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Per proteggere la reputazione digitale è consigliato:",
-        "opzioni": ["Pensare prima di pubblicare", "Pubblicare tutto impulsivamente", "Usare sempre account anonimi", "Non controllare mai le impostazioni privacy"],
-        "rispostaCorretta": "Pensare prima di pubblicare",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Il manuale cita l’importanza di:",
-        "opzioni": ["Configurare correttamente le impostazioni di privacy sui social", "Rendere sempre tutto pubblico", "Condividere password", "Usare lo stesso nickname ovunque senza pensarci"],
-        "rispostaCorretta": "Configurare correttamente le impostazioni di privacy sui social",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "È possibile avere identità digitali diverse per:",
-        "opzioni": ["Contesti professionali e personali", "Solo lavoro", "Solo svago", "Nessun contesto"],
-        "rispostaCorretta": "Contesti professionali e personali",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un consiglio per la gestione dell’identità digitale è:",
-        "opzioni": ["Separare profilo personale e professionale", "Usare lo stesso profilo per tutto", "Non avere foto profilo", "Cambiare account ogni giorno"],
-        "rispostaCorretta": "Separare profilo personale e professionale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La reputazione digitale può essere danneggiata da:",
-        "opzioni": ["Contenuti pubblicati anni fa", "Solo contenuti recenti", "Mai, tutto sparisce", "Solo da altri utenti"],
-        "rispostaCorretta": "Contenuti pubblicati anni fa",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Per la netiquette è consigliato:",
-        "opzioni": ["Evitare di rispondere emotivamente a messaggi provocatori", "Rispondere sempre con insulti", "Alimentare flame", "Inviare messaggi multipli uguali"],
-        "rispostaCorretta": "Evitare di rispondere emotivamente a messaggi provocatori",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.6 include:",
-        "opzioni": ["Monitorare la propria impronta digitale", "Ignorare cosa c’è online su di sé", "Pubblicare tutto senza filtri", "Non usare mai i social"],
-        "rispostaCorretta": "Monitorare la propria impronta digitale",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un esempio di buona netiquette è:",
-        "opzioni": ["Rispondere in modo educato anche a critiche", "Bloccare tutti", "Trollare", "Inviare spam"],
-        "rispostaCorretta": "Rispondere in modo educato anche a critiche",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Per gestire l’identità digitale è utile:",
-        "opzioni": ["Cercare periodicamente il proprio nome su Google", "Non controllare mai", "Usare solo nickname assurdi", "Creare centinaia di profili falsi"],
-        "rispostaCorretta": "Cercare periodicamente il proprio nome su Google",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La netiquette vieta praticamente:",
-        "opzioni": ["Il flaming (provocazioni intenzionali)", "Le discussioni serene", "Le risposte educate", "L’uso di emoji"],
-        "rispostaCorretta": "Il flaming (provocazioni intenzionali)",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "È buona prassi per la reputazione digitale:",
-        "opzioni": ["Pubblicare solo contenuti di cui si è orgogliosi", "Usare sempre linguaggio volgare", "Taggare tutti senza permesso", "Pubblicare tutto ciò che viene in mente"],
-        "rispostaCorretta": "Pubblicare solo contenuti di cui si è orgogliosi",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.6 consiglia di:",
-        "opzioni": ["Usare password diverse e complesse per ogni account", "Usare sempre la stessa password", "Non usare password", "Condividere le password"],
-        "rispostaCorretta": "Usare password diverse e complesse per ogni account",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un rischio citato per l’identità digitale è:",
-        "opzioni": ["Furto d’identità", "Nessun rischio", "Troppa privacy", "Impossibilità di creare profili"],
-        "rispostaCorretta": "Furto d’identità",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "È buona netiquette:",
-        "opzioni": ["Non inondare le chat con messaggi inutili", "Inviare 50 messaggi uguali", "Usare solo emoji", "Scrivere solo in maiuscolo"],
-        "rispostaCorretta": "Non inondare le chat con messaggi inutili",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Per proteggere l’identità digitale è consigliato:",
-        "opzioni": ["Attivare l’autenticazione a due fattori", "Disattivarla sempre", "Condividere codici 2FA", "Usare solo SMS"],
-        "rispostaCorretta": "Attivare l’autenticazione a due fattori",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La netiquette promuove:",
-        "opzioni": ["Il rispetto della privacy altrui", "La condivisione di dati personali senza consenso", "Il doxxing", "La diffamazione"],
-        "rispostaCorretta": "Il rispetto della privacy altrui",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La gestione dell’identità digitale include:",
-        "opzioni": ["Eliminare periodicamente contenuti compromettenti", "Lasciare tutto online per sempre", "Non eliminare mai nulla", "Pubblicare solo foto altrui"],
-        "rispostaCorretta": "Eliminare periodicamente contenuti compromettenti",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "È buona netiquette:",
-        "opzioni": ["Chiedere permesso prima di taggare qualcuno", "Taggare tutti senza chiedere", "Pubblicare foto di altri senza consenso", "Creare gruppi senza avvisare"],
-        "rispostaCorretta": "Chiedere permesso prima di taggare qualcuno",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "La competenza 2.6 serve soprattutto a:",
-        "opzioni": ["Proteggere la propria reputazione futura (lavoro, università…)", "Rendere tutto pubblico", "Non pensare al futuro", "Creare solo profili falsi"],
-        "rispostaCorretta": "Proteggere la propria reputazione futura (lavoro, università…)",
-        "area": "Area 2"
-    },
-    {
-        "domanda": "Un consiglio del manuale per la netiquette è:",
-        "opzioni": ["Usare un tono professionale nelle comunicazioni di lavoro", "Rispondere con modi inappropriati", "Ignorare la cortesia", "Scrivere messaggi criptici"],
-        "rispostaCorretta": "Usare un tono professionale nelle comunicazioni di lavoro",
-        "area": "Area 2"
-    } // FINE DELLA TUA ULTIMA DOMANDA. NESSUNA VIRGOLA QUI!
-];
+{
+"domanda": "Secondo il syllabus, cosa si intende per collaborazione in ambienti digitali?",
+"opzioni": ["L'uso di tecnologie digitali per lavorare insieme verso un obiettivo comune", "La navigazione su siti di notizie", "L'invio di posta elettronica non richiesta", "L'acquisto di prodotti su siti di e-commerce"],
+"rispostaCorretta": "L'uso di tecnologie digitali per lavorare insieme verso un obiettivo comune",
+"area": "Area 2"
+},
+{
+"domanda": "Quale tra i seguenti strumenti è un esempio tipico di comunicazione asincrona?",
+"opzioni": ["Videochiamata in diretta", "Posta elettronica (E-mail)", "Telefonata tradizionale", "Chat dal vivo con supporto tecnico"],
+"rispostaCorretta": "Posta elettronica (E-mail)",
+"area": "Area 2"
+},
+{
+"domanda": "Quale dei seguenti è un sistema di messaggistica istantanea citato nel manuale AICA?",
+"opzioni": ["Microsoft Excel", "Signal", "Adobe Acrobat", "Google Drive"],
+"rispostaCorretta": "Signal",
+"area": "Area 2"
+},
+{
+"domanda": "Secondo la definizione standard del syllabus, cos'è lo spam?",
+"opzioni": ["Un virus che cancella i file", "L'invio massivo di messaggi indesiderati", "Un tipo di file compresso", "Un sistema di protezione dei dati"],
+"rispostaCorretta": "L'invio massivo di messaggi indesiderati",
+"area": "Area 2"
+},
+{
+"domanda": "Qual è un vantaggio della posta elettronica rispetto alla messaggistica istantanea?",
+"opzioni": ["L'obbligo di risposta immediata", "Una migliore organizzazione e archiviazione formale dei messaggi", "La possibilità di inviare solo messaggi vocali", "La necessità che entrambi gli utenti siano online"],
+"rispostaCorretta": "Una migliore organizzazione e archiviazione formale dei messaggi",
+"area": "Area 2"
+},
+{
+"domanda": "Cosa indica il manuale AICA riguardo all'uso di sistemi come Zoom o Google Meet?",
+"opzioni": ["Sono utilizzabili solo da tablet", "Alcuni sistemi possono richiedere l'installazione di un'app dedicata", "Funzionano solo senza connessione internet", "Sostituiscono completamente l'invio di SMS"],
+"rispostaCorretta": "Alcuni sistemi possono richiedere l'installazione di un'app dedicata",
+"area": "Area 2"
+},
+{
+"domanda": "Cosa si intende per 'interazione con un'intelligenza artificiale'?",
+"opzioni": ["L'invio di una raccomandata", "L'uso di chatbot che rispondono in modo automatizzato alle richieste", "La pulizia dello schermo del PC", "La condivisione di una foto su Instagram"],
+"rispostaCorretta": "L'uso di chatbot che rispondono in modo automatizzato alle richieste",
+"area": "Area 2"
+},
+{
+"domanda": "Perché molti servizi di comunicazione digitali sono offerti gratuitamente?",
+"opzioni": ["Perché non hanno costi di gestione", "Perché sono finanziati tramite la pubblicità e l'uso dei dati degli utenti", "Perché sono obbligatori per legge", "Perché sono creati da volontari anonimi"],
+"rispostaCorretta": "Perché sono finanziati tramite la pubblicità e l'uso dei dati degli utenti",
+"area": "Area 2"
+},
+{
+"domanda": "Quale programma è un esempio di 'client di posta' gestito in locale sul computer?",
+"opzioni": ["Gmail (tramite browser)", "Microsoft Outlook", "Facebook Messenger", "WhatsApp Web"],
+"rispostaCorretta": "Microsoft Outlook",
+"area": "Area 2"
+},
+{
+"domanda": "Quale strumento è più adatto per una comunicazione ufficiale e formale con un ente pubblico?",
+"opzioni": ["Podcast", "E-mail (o PEC)", "Messaggio su TikTok", "Stato di WhatsApp"],
+"rispostaCorretta": "E-mail (o PEC)",
+"area": "Area 2"
+},
+{
+"domanda": "Cosa si intende per 'nudging' negli ambienti digitali?",
+"opzioni": ["Un attacco informatico per rubare password", "L'uso di meccanismi per influenzare sottilmente il comportamento dell'utente", "Il blocco automatico della videocamera", "L'aggiornamento del sistema operativo"],
+"rispostaCorretta": "L'uso di meccanismi per influenzare sottilmente il comportamento dell'utente",
+"area": "Area 2"
+},
+{
+"domanda": "Per leggere una e-mail ricevuta, quale azione è solitamente necessaria?",
+"opzioni": ["Riavviare il computer", "Selezionare o cliccare sul messaggio nell'elenco della posta in arrivo", "Cancellare il messaggio immediatamente", "Inviarne una copia a se stessi"],
+"rispostaCorretta": "Selezionare o cliccare sul messaggio nell'elenco della posta in arrivo",
+"area": "Area 2"
+},
+{
+"domanda": "In un sistema di messaggistica istantanea, come si invia un messaggio dopo averlo scritto?",
+"opzioni": ["Premendo il tasto di spegnimento", "Cliccando sull'icona di invio (solitamente un aeroplanino)", "Chiudendo la finestra dell'applicazione", "Scuotendo il dispositivo"],
+"rispostaCorretta": "Cliccando sull'icona di invio (solitamente un aeroplanino)",
+"area": "Area 2"
+},
+{
+"domanda": "In una e-mail, a cosa serve il campo 'Cc'?",
+"opzioni": ["A inserire l'allegato", "A inviare una copia del messaggio per conoscenza ad altri destinatari", "A nascondere l'indirizzo del mittente", "A correggere gli errori grammaticali"],
+"rispostaCorretta": "A inviare una copia del messaggio per conoscenza ad altri destinatari",
+"area": "Area 2"
+},
+{
+"domanda": "Cosa significa fare un uso consapevole delle comunicazioni?",
+"opzioni": ["Inviare messaggi a qualsiasi ora senza distinzione", "Valutare quale strumento sia più adatto tra sincrono e asincrono in base all'urgenza", "Usare solo strumenti a pagamento", "Non rispondere mai alle e-mail dei colleghi"],
+"rispostaCorretta": "Valutare quale strumento sia più adatto tra sincrono e asincrono in base all'urgenza",
+"area": "Area 2"
+},
+{
+"domanda": "Quale funzione di messaggistica permette di inoltrare un messaggio ricevuto?",
+"opzioni": ["Elimina", "Inoltra (Forward)", "Copia", "Silenzia"],
+"rispostaCorretta": "Inoltra (Forward)",
+"area": "Area 2"
+},
+{
+"domanda": "Per spedire un messaggio vocale, quale componente hardware deve essere attivo?",
+"opzioni": ["La stampante", "Il microfono", "Lo scanner", "Il mouse"],
+"rispostaCorretta": "Il microfono",
+"area": "Area 2"
+},
+{
+"domanda": "Come si può partecipare a una videochiamata programmata tramite link?",
+"opzioni": ["Bisogna chiamare il numero verde", "Bisogna cliccare sul link ricevuto all'orario stabilito", "Bisogna inviare una raccomandata", "Bisogna cambiare la password del Wi-Fi"],
+"rispostaCorretta": "Bisogna cliccare sul link ricevuto all'orario stabilito",
+"area": "Area 2"
+},
+{
+"domanda": "Durante una videochiamata, cosa si intende per 'MUTE'?",
+"opzioni": ["La disattivazione della videocamera", "La disattivazione del proprio microfono", "La chiusura della connessione internet", "L'invio di un messaggio di testo"],
+"rispostaCorretta": "La disattivazione del proprio microfono",
+"area": "Area 2"
+},
+{
+"domanda": "Quale tasto si usa solitamente per terminare una videochiamata individuale o di gruppo?",
+"opzioni": ["Il tasto F5 sulla tastiera", "Il tasto 'Abbandona' o l'icona della cornetta rossa", "Il tasto di blocco dello schermo", "Il tasto INVIO"],
+"rispostaCorretta": "Il tasto 'Abbandona' o l'icona della cornetta rossa",
+"area": "Area 2"
+},
+{
+"domanda": "Cosa consente di fare la 'condivisione dello schermo' in una videochiamata?",
+"opzioni": ["Vedere cosa mangia l'interlocutore", "Mostrare il proprio desktop o un'applicazione specifica agli altri partecipanti", "Dividere lo schermo fisicamente in due parti", "Aumentare la risoluzione della webcam"],
+"rispostaCorretta": "Mostrare il proprio desktop o un'applicazione specifica agli altri partecipanti",
+"area": "Area 2"
+},
+{
+"domanda": "Qual è il vantaggio di usare la chat interna durante una videochiamata?",
+"opzioni": ["Spegnere il computer degli altri", "Comunicare per iscritto o condividere link senza interrompere chi parla", "Evitare di pagare il canone internet", "Visualizzare i file segreti del mittente"],
+"rispostaCorretta": "Comunicare per iscritto o condividere link senza interrompere chi parla",
+"area": "Area 2"
+},
+{
+"domanda": "Come si può visualizzare chi sta partecipando a una videochiamata su piattaforme come Meet o Teams?",
+"opzioni": ["Bisogna gridare il proprio nome", "Consultando l'apposita sezione 'Partecipanti' nell'interfaccia del software", "Contando le luci sul modem", "Non è possibile visualizzare l'elenco"],
+"rispostaCorretta": "Consultando l'apposita sezione 'Partecipanti' nell'interfaccia del software",
+"area": "Area 2"
+},
+{
+"domanda": "Cosa comporta l'azione di 'archiviare' un messaggio di posta?",
+"opzioni": ["La cancellazione definitiva del messaggio", "Lo spostamento del messaggio dalla cartella principale a un archivio, mantenendolo recuperabile", "L'invio del messaggio alla polizia postale", "La stampa automatica su carta"],
+"rispostaCorretta": "Lo spostamento del messaggio dalla cartella principale a un archivio, mantenendolo recuperabile",
+"area": "Area 2"
+},
+{
+"domanda": "Come si dovrebbe gestire un'e-mail identificata come spam?",
+"opzioni": ["Rispondendo con rabbia", "Aprendo tutti i link per curiosità", "Segnalandola come spam e cancellandola senza aprire gli allegati", "Inviandola a tutti i propri amici"],
+"rispostaCorretta": "Segnalandola come spam e cancellandola senza aprire gli allegati",
+"area": "Area 2"
+},
+{
+"domanda": "Quale elemento suggerisce che stai interagendo con un chatbot basato su IA?",
+"opzioni": ["La presenza di errori di ortografia umani", "Risposte immediate disponibili 24 ore su 24 con uno stile spesso ripetitivo", "Il fatto che l'interlocutore ti chieda un prestito", "La necessità di usare una penna ottica"],
+"rispostaCorretta": "Risposte immediate disponibili 24 ore su 24 con uno stile spesso ripetitivo",
+"area": "Area 2"
+},
+{
+"domanda": "Qual è lo scopo principale del fornire feedback a un sistema di IA?",
+"opzioni": ["Vincere un premio in denaro", "Aiutare il sistema ad apprendere e migliorare la qualità delle risposte", "Spegnere il server dell'azienda", "Ottenere uno sconto sulla bolletta elettrica"],
+"rispostaCorretta": "Aiutare il sistema ad apprendere e migliorare la qualità delle risposte",
+"area": "Area 2"
+},
+{
+"domanda": "Per programmare una riunione tra più persone in modalità asincrona, cosa è utile usare?",
+"opzioni": ["Una telefonata circolare", "Uno strumento di sondaggio (come Doodle)", "Un post su un social network pubblico", "Un messaggio vocale di 10 minuti"],
+"rispostaCorretta": "Uno strumento di sondaggio (come Doodle)",
+"area": "Area 2"
+}
+{
+    "domanda": "Secondo il manuale AICA, che cos'è il 'Cloud'?",
+    "opzioni": ["Un dispositivo fisico da collegare al router", "Uno spazio di archiviazione e servizi accessibili via internet su server remoti", "Un programma per stampare documenti a distanza", "Un sistema per velocizzare il processore del computer"],
+    "rispostaCorretta": "Uno spazio di archiviazione e servizi accessibili via internet su server remoti",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale tra i seguenti è un social network citato come luogo di comunità digitale nel syllabus?",
+    "opzioni": ["Google Drive", "TikTok", "Microsoft Word", "Dropbox"],
+    "rispostaCorretta": "TikTok",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale tecnologia è più indicata per la condivisione di file e informazioni in ambito lavorativo collaborativo?",
+    "opzioni": ["SMS tradizionali", "Piattaforme di cloud storage o messaggistica come Slack", "Solo la posta ordinaria", "Le telefonate anonime"],
+    "rispostaCorretta": "Piattaforme di cloud storage o messaggistica come Slack",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è uno dei rischi principali legati alla sincronizzazione dei file con il cloud?",
+    "opzioni": ["Il computer consuma meno energia", "Le modifiche o cancellazioni fatte su un dispositivo si replicano su tutti gli altri collegati", "I file diventano leggibili solo in bianco e nero", "La connessione internet viene interrotta per sempre"],
+    "rispostaCorretta": "Le modifiche o cancellazioni fatte su un dispositivo si replicano su tutti gli altri collegati",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa deve sapere l'utente riguardo ai contenuti condivisi pubblicamente online e l'IA?",
+    "opzioni": ["Che vengono protetti da una password segreta universale", "Che possono essere usati per addestrare sistemi di intelligenza artificiale", "Che vengono cancellati automaticamente dopo un'ora", "Che non possono essere visti da nessuno"],
+    "rispostaCorretta": "Che possono essere usati per addestrare sistemi di intelligenza artificiale",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è la responsabilità principale di un 'facilitatore online'?",
+    "opzioni": ["Riparare i guasti elettrici dei server", "Guidare e strutturare un gruppo di discussione favorendo la partecipazione", "Controllare la cronologia del browser dei partecipanti", "Vendere prodotti pubblicitari ai membri del gruppo"],
+    "rispostaCorretta": "Guidare e strutturare un gruppo di discussione favorendo la partecipazione",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Sui social network, qual è la funzione principale del tasto 'mi piace'?",
+    "opzioni": ["Scaricare il post sul proprio PC", "Esprimere un parere positivo o apprezzamento verso un contenuto", "Bloccare l'autore del post", "Inviare una mail di reclamo alla piattaforma"],
+    "rispostaCorretta": "Esprimere un parere positivo o apprezzamento verso un contenuto",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale funzione permette di inviare la propria posizione GPS tramite messaggistica istantanea?",
+    "opzioni": ["Invia allegato", "Condividi posizione", "Invia contatto", "Inoltra messaggio"],
+    "rispostaCorretta": "Condividi posizione",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa significa creare una rete di contatti (follower) in un social network?",
+    "opzioni": ["Cancellare tutti i propri dati personali", "Costruire un elenco di persone con cui scambiare informazioni e aggiornamenti", "Installare un nuovo sistema operativo", "Pagare una quota mensile a ogni amico"],
+    "rispostaCorretta": "Costruire un elenco di persone con cui scambiare informazioni e aggiornamenti",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si intende per 'aderire a un gruppo di interesse' su un social network?",
+    "opzioni": ["Diventare proprietari della società che gestisce il social", "Unirsi a una comunità digitale focalizzata su un tema specifico", "Sostituire la propria foto profilo con un logo", "Inviare un messaggio privato a tutti gli utenti della piattaforma"],
+    "rispostaCorretta": "Unirsi a una comunità digitale focalizzata su un tema specifico",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In un'app di messaggistica, chi può 'abbandonare' una chat di gruppo?",
+    "opzioni": ["Solo l'amministratore", "Qualsiasi partecipante in modo autonomo", "Solo chi ha creato l'account telefonico", "Nessuno, bisogna essere rimossi dall'esterno"],
+    "rispostaCorretta": "Qualsiasi partecipante in modo autonomo",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa significa 'caricare un file nel cloud'?",
+    "opzioni": ["Stampare il file su carta", "Trasferire un file dal proprio dispositivo a un server remoto su internet", "Cancellare il file dal disco rigido", "Spostare il file in una cartella locale del desktop"],
+    "rispostaCorretta": "Trasferire un file dal proprio dispositivo a un server remoto su internet",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa consente il permesso di 'Commento' su un file condiviso nel cloud?",
+    "opzioni": ["Di cancellare l'intero contenuto", "Di inserire note e osservazioni senza modificare il testo originale", "Di cambiare il nome del proprietario", "Di impedire agli altri di aprire il file"],
+    "rispostaCorretta": "Di inserire note e osservazioni senza modificare il testo originale",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Perché è fondamentale citare le fonti quando si condividono contenuti altrui?",
+    "opzioni": ["Per aumentare la velocità di download", "Per rispettare il diritto d'autore e la proprietà intellettuale", "Perché i file citati occupano meno spazio", "Per evitare che il computer si surriscaldi"],
+    "rispostaCorretta": "Per rispettare il diritto d'autore e la proprietà intellettuale",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è lo scopo della creazione di una 'Pagina' per un'organizzazione su un social network?",
+    "opzioni": ["Nascondere le informazioni al pubblico", "Creare un profilo ufficiale per comunicare con il proprio pubblico o clienti", "Sostituire il sito web della Pubblica Amministrazione", "Controllare i profili privati dei dipendenti"],
+    "rispostaCorretta": "Creare un profilo ufficiale per comunicare con il proprio pubblico o clienti",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Come si può contrastare la disinformazione (notizie false) sui social media?",
+    "opzioni": ["Condividendo la notizia con più persone possibile", "Usando le funzioni di segnalazione messe a disposizione dalla piattaforma", "Scrivendo un commento offensivo sotto il post", "Disinstallando il browser"],
+    "rispostaCorretta": "Usando le funzioni di segnalazione messe a disposizione dalla piattaforma",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si intende per 'e-government'?",
+    "opzioni": ["L'uso delle tecnologie digitali per migliorare i servizi pubblici e la partecipazione dei cittadini", "La vendita di prodotti elettronici da parte del governo", "Un sistema per spiare i cittadini online", "La sostituzione dei politici con dei robot"],
+    "rispostaCorretta": "L'uso delle tecnologie digitali per migliorare i servizi pubblici e la partecipazione dei cittadini",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale di questi è un esempio di portale di e-government citato nel syllabus?",
+    "opzioni": ["Amazon", "Anagrafe Nazionale (ANPR)", "Netflix", "eBay"],
+    "rispostaCorretta": "Anagrafe Nazionale (ANPR)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "A cosa si riferisce il termine 'e-Health'?",
+    "opzioni": ["Alla vendita di attrezzi sportivi online", "All'uso delle tecnologie digitali applicate alla sanità e all'assistenza", "Al controllo della temperatura del computer", "Alla ginnastica fatta davanti allo schermo"],
+    "rispostaCorretta": "All'uso delle tecnologie digitali applicate alla sanità e all'assistenza",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Perché siti come Wikipedia o OpenStreetMap sono definiti basati sulla collaborazione?",
+    "opzioni": ["Perché sono di proprietà di una sola persona", "Perché il loro contenuto è creato e aggiornato da una vasta comunità di volontari", "Perché richiedono un pagamento obbligatorio per ogni lettura", "Perché sono scritti interamente da intelligenze artificiali senza supervisione"],
+    "rispostaCorretta": "Perché il loro contenuto è creato e aggiornato da una vasta comunità di volontari",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale tipo di firma elettronica ha il massimo valore legale e garantisce l'integrità del documento?",
+    "opzioni": ["Firma elettronica semplice", "Firma digitale", "Firma su carta scannerizzata", "Firma scritta con il mouse"],
+    "rispostaCorretta": "Firma digitale",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale documento normativo definisce i diritti di cittadinanza digitale in Italia?",
+    "opzioni": ["Il Codice Civile del 1942", "Il Codice dell'Amministrazione Digitale (CAD)", "Il manuale d'uso di Windows", "La costituzione americana"],
+    "rispostaCorretta": "Il Codice dell'Amministrazione Digitale (CAD)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si intende per 'ricetta digitale' (ePrescription)?",
+    "opzioni": ["Un consiglio medico trovato su un blog", "La versione elettronica della ricetta medica cartacea, identificata da un codice (NRE)", "Una fattura per l'acquisto di farmaci online", "Un'applicazione per cucinare piatti sani"],
+    "rispostaCorretta": "La versione elettronica della ricetta medica cartacea, identificata da un codice (NRE)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa contiene il Fascicolo Sanitario Elettronico (FSE)?",
+    "opzioni": ["Solo l'elenco dei medici di base", "I dati e i documenti digitali relativi alla storia sanitaria di un cittadino", "Le fatture dell'energia elettrica", "L'elenco dei contatti telefonici della farmacia"],
+    "rispostaCorretta": "I dati e i documenti digitali relativi alla storia sanitaria di un cittadino",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale diritto hanno i cittadini europei rispetto alle decisioni prese da sistemi di IA?",
+    "opzioni": ["Nessun diritto specifico", "Il diritto di non essere soggetti a decisioni basate esclusivamente su processi automatizzati", "Il diritto di ricevere un computer nuovo ogni anno", "Il diritto di non pagare i servizi online"],
+    "rispostaCorretta": "Il diritto di non essere soggetti a decisioni basate esclusivamente su processi automatizzati",
+    "area": "Area 2"
+  }
+  {
+    "domanda": "Secondo il syllabus, cosa offrono le piattaforme online per la sostenibilità ai cittadini?",
+    "opzioni": ["Sconti per l'acquisto di prodotti di plastica", "L'opportunità di partecipare ad azioni per l'innovazione a livello locale o internazionale", "L'obbligo di spegnere il computer per 10 ore al giorno", "La possibilità di stampare documenti cartacei gratuitamente"],
+    "rispostaCorretta": "L'opportunità di partecipare ad azioni per l'innovazione a livello locale o internazionale",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In quale modo l'IA può favorire la cittadinanza digitale secondo il manuale AICA?",
+    "opzioni": ["Sostituendo completamente il giudizio umano nelle leggi", "Supportando i cittadini in diversi aspetti della vita quotidiana, se ben progettata", "Impedendo l'accesso ai siti web non governativi", "Aumentando il costo della connessione internet"],
+    "rispostaCorretta": "Supportando i cittadini in diversi aspetti della vita quotidiana, se ben progettata",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si trova solitamente nel 'menu principale' di un portale di e-government?",
+    "opzioni": ["L'elenco dei siti di giochi online", "I collegamenti alle diverse sezioni e ai servizi offerti dall'ente pubblico", "Solo le foto dei dipendenti dell'ufficio", "Un link per scaricare film protetti da copyright"],
+    "rispostaCorretta": "I collegamenti alle diverse sezioni e ai servizi offerti dall'ente pubblico",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Per visualizzare i propri dati in un portale di e-government, quale operazione è necessaria?",
+    "opzioni": ["Inviare una lettera anonima", "Accedere all'area riservata tramite un sistema di autenticazione (es. SPID o CIE)", "Cercare il proprio nome su un motore di ricerca pubblico", "Scrivere un post su un social network"],
+    "rispostaCorretta": "Accedere all'area riservata tramite un sistema di autenticazione (es. SPID o CIE)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Dove può un cittadino consultare le proprie ricette mediche digitali?",
+    "opzioni": ["Sul proprio profilo Instagram", "Nel Fascicolo Sanitario Elettronico (FSE) o portale sanitario regionale", "Sul sito della propria banca", "Esclusivamente sul sito del produttore del farmaco"],
+    "rispostaCorretta": "Nel Fascicolo Sanitario Elettronico (FSE) o portale sanitario regionale",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa permette di fare il servizio ANPR (Anagrafe Nazionale della Popolazione Residente)?",
+    "opzioni": ["Votare per i concorsi canori online", "Richiedere e scaricare certificati anagrafici per sé o per i componenti della propria famiglia", "Modificare la data di nascita di altri cittadini", "Prenotare voli aerei a prezzi scontati"],
+    "rispostaCorretta": "Richiedere e scaricare certificati anagrafici per sé o per i componenti della propria famiglia",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è il metodo standard in Italia per pagare online i servizi della Pubblica Amministrazione?",
+    "opzioni": ["Inviare un assegno via mail", "Utilizzare la piattaforma PagoPA", "Barattare beni digitali", "Non è possibile pagare online i servizi pubblici"],
+    "rispostaCorretta": "Utilizzare la piattaforma PagoPA",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Secondo il manuale, qual è un vantaggio della didattica a distanza (DaD)?",
+    "opzioni": ["Elimina totalmente la necessità di studiare", "Consente la continuità dell'apprendimento anche quando non è possibile la presenza fisica", "Permette di usare i videogiochi durante le lezioni", "Riduce la durata dell'anno scolastico"],
+    "rispostaCorretta": "Consente la continuità dell'apprendimento anche quando non è possibile la presenza fisica",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale tra i seguenti è un ambiente digitale di collaborazione citato nel syllabus?",
+    "opzioni": ["Microsoft Notepad", "Google Workspace", "Il cestino di Windows", "La calcolatrice di sistema"],
+    "rispostaCorretta": "Google Workspace",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è uno svantaggio comune del lavoro a distanza (smart working)?",
+    "opzioni": ["Il risparmio sui tempi di spostamento", "Il rischio di isolamento sociale e la difficoltà di separazione tra vita privata e lavorativa", "L'obbligo di stare in ufficio 8 ore al giorno", "L'impossibilità di usare il computer"],
+    "rispostaCorretta": "Il rischio di isolamento sociale e la difficoltà di separazione tra vita privata e lavorativa",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "A cosa serve lo strumento online 'Doodle'?",
+    "opzioni": ["A disegnare loghi aziendali", "A pianificare e concordare date e orari per riunioni tra più persone", "A proteggere il computer dai malware", "A creare fogli di calcolo complessi"],
+    "rispostaCorretta": "A pianificare e concordare date e orari per riunioni tra più persone",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa permette di fare la funzione 'commento' in un documento cloud condiviso?",
+    "opzioni": ["Cancellare il lavoro degli altri senza lasciare traccia", "Aggiungere note, osservazioni o suggerimenti senza modificare il testo principale", "Modificare la password di tutti i collaboratori", "Nascondere il file ai motori di ricerca"],
+    "rispostaCorretta": "Aggiungere note, osservazioni o suggerimenti senza modificare il testo principale",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è la funzione di piattaforme come Miro o Padlet?",
+    "opzioni": ["Sostituire il sistema operativo", "Fungere da lavagne digitali per collaborare visivamente e scambiare idee in tempo reale", "Ripulire il disco rigido dai file inutili", "Gestire solo la posta elettronica"],
+    "rispostaCorretta": "Fungere da lavagne digitali per collaborare visivamente e scambiare idee in tempo reale",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si intende per 'permesso di modifica' in un file condiviso?",
+    "opzioni": ["L'utente può solo guardare il file", "L'utente ha l'autorizzazione per apportare cambiamenti al contenuto del file", "L'utente può solo stampare il file", "L'utente deve pagare una licenza per ogni click"],
+    "rispostaCorretta": "L'utente ha l'autorizzazione per apportare cambiamenti al contenuto del file",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "A cosa serve la 'cronologia delle versioni' in strumenti come Google Docs o Word Online?",
+    "opzioni": ["A vedere quante persone hanno comprato il software", "A visualizzare le modifiche apportate nel tempo e ripristinare versioni precedenti se necessario", "A cancellare definitivamente tutti i backup", "A cambiare la lingua del sistema operativo"],
+    "rispostaCorretta": "A visualizzare le modifiche apportate nel tempo e ripristinare versioni precedenti se necessario",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale strumento è ideale per raccogliere opinioni o dati da un gruppo numeroso di persone?",
+    "opzioni": ["Un foglio di testo semplice", "Un servizio per la creazione di sondaggi online (es. Google Moduli)", "Una telefonata singola a ogni partecipante", "Un'immagine pubblicata su un blog"],
+    "rispostaCorretta": "Un servizio per la creazione di sondaggi online (es. Google Moduli)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è lo scopo principale di software di gestione progetti come Trello o Asana?",
+    "opzioni": ["Ascoltare musica in streaming", "Organizzare, assegnare e monitorare i compiti all'interno di un team", "Ritoccare fotografie digitali", "Navigare in modo anonimo sul web"],
+    "rispostaCorretta": "Organizzare, assegnare e monitorare i compiti all'interno di un team",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa permette la creazione condivisa di mappe mentali online?",
+    "opzioni": ["La navigazione stradale GPS", "L'organizzazione visiva e collaborativa di idee e concetti", "La stampa di poster giganti", "Il controllo remoto di altri computer"],
+    "rispostaCorretta": "L'organizzazione visiva e collaborativa di idee e concetti",
+    "area": "Area 2"
+  }
+  {
+    "domanda": "Cosa si intende per 'Netiquette' negli ambienti digitali?",
+    "opzioni": ["Un software per la protezione della rete", "L'insieme delle regole di buona educazione e comportamento da rispettare online", "Un tipo di abbonamento internet ultra veloce", "La procedura per resettare la password del router"],
+    "rispostaCorretta": "L'insieme delle regole di buona educazione e comportamento da rispettare online",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In una comunicazione scritta online, cosa suggerisce l'uso del TUTTO MAIUSCOLO?",
+    "opzioni": ["Che il mittente ha la tastiera guasta", "Che si sta urlando o parlando con aggressività", "Che il messaggio è molto importante e va stampato", "Che il testo è stato scritto da un'intelligenza artificiale"],
+    "rispostaCorretta": "Che si sta urlando o parlando con aggressività",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è un comportamento corretto da tenere in una chat di gruppo secondo la netiquette?",
+    "opzioni": ["Inviare messaggi a qualsiasi ora della notte", "Evitare di andare fuori tema (off-topic) rispetto allo scopo del gruppo", "Inserire pubblicità dei propri prodotti ogni ora", "Insultare chi esprime un'opinione diversa"],
+    "rispostaCorretta": "Evitare di andare fuori tema (off-topic) rispetto allo scopo del gruppo",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si intende per 'flaming' nelle comunità online?",
+    "opzioni": ["L'invio di messaggi d'amore e amicizia", "L'invio di messaggi ostili, insulti o provocazioni per scatenare litigi", "Il surriscaldamento del processore del computer", "La condivisione di foto di paesaggi naturali"],
+    "rispostaCorretta": "L'invio di messaggi ostili, insulti o provocazioni per scatenare litigi",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è il modo corretto di gestire i conflitti in una comunicazione digitale?",
+    "opzioni": ["Rispondere immediatamente con rabbia", "Mantenere la calma e cercare un chiarimento costruttivo o ignorare le provocazioni", "Segnalare l'utente alla polizia anche per piccoli disaccordi", "Cancellare il proprio account per sempre"],
+    "rispostaCorretta": "Mantenere la calma e cercare un chiarimento costruttivo o ignorare le provocazioni",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si intende per 'Identità Digitale'?",
+    "opzioni": ["La marca del proprio computer e smartphone", "L'insieme delle informazioni e dei dati che rappresentano una persona online", "Un codice segreto fornito solo ai programmatori", "L'immagine del profilo scelta su un social network"],
+    "rispostaCorretta": "L'insieme delle informazioni e dei dati che rappresentano una persona online",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è un esempio di sistema di identità digitale protetta in Italia?",
+    "opzioni": ["Il numero di cellulare", "Lo SPID (Sistema Pubblico di Identità Digitale)", "L'indirizzo di casa", "Il nickname usato nei videogiochi"],
+    "rispostaCorretta": "Lo SPID (Sistema Pubblico di Identità Digitale)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Perché è importante proteggere la propria reputazione online?",
+    "opzioni": ["Perché ciò che pubblichiamo può influenzare le opportunità lavorative e personali future", "Perché altrimenti il computer rallenta", "Perché è obbligatorio per legge non sbagliare mai", "Perché le foto online occupano troppo spazio"],
+    "rispostaCorretta": "Perché ciò che pubblichiamo può influenzare le opportunità lavorative e personali future",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa indica il termine 'Digital Footprint' (impronta digitale)?",
+    "opzioni": ["La scansione del dito per sbloccare il telefono", "Le tracce che lasciamo online attraverso le nostre attività e pubblicazioni", "La polvere che si accumula sulla tastiera", "Il numero di dispositivi collegati allo stesso Wi-Fi"],
+    "rispostaCorretta": "Le tracce che lasciamo online attraverso le nostre attività e pubblicazioni",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Come si possono limitare i dati personali raccolti dalle applicazioni?",
+    "opzioni": ["Spegnendo il monitor ogni 5 minuti", "Controllando e modificando le autorizzazioni nelle impostazioni sulla privacy del dispositivo", "Cancellando tutti i contatti in rubrica", "Usando solo applicazioni a pagamento"],
+    "rispostaCorretta": "Controllando e modificando le autorizzazioni nelle impostazioni sulla privacy del dispositivo",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è una buona pratica per gestire le proprie password?",
+    "opzioni": ["Usare la stessa password per tutti i siti", "Utilizzare password forti, uniche per ogni servizio e cambiarle regolarmente", "Scrivere le password su un post-it attaccato al monitor", "Condividere le password con gli amici per sicurezza"],
+    "rispostaCorretta": "Utilizzare password forti, uniche per ogni servizio e cambiarle regolarmente",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa permette di fare l'autenticazione a due fattori (2FA)?",
+    "opzioni": ["Accedere a due siti contemporaneamente", "Aggiungere un ulteriore livello di sicurezza richiedendo un secondo codice oltre alla password", "Usare due tastiere diverse per scrivere", "Visualizzare il doppio delle informazioni"],
+    "rispostaCorretta": "Aggiungere un ulteriore livello di sicurezza richiedendo un secondo codice oltre alla password",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa dovrebbe fare un utente se non intende più utilizzare un servizio online?",
+    "opzioni": ["Lasciare l'account così com'è per sempre", "Disattivare o eliminare l'account per ridurre l'esposizione dei propri dati", "Cambiare solo la foto profilo", "Inviare un messaggio di addio a tutti"],
+    "rispostaCorretta": "Disattivare o eliminare l'account per ridurre l'esposizione dei propri dati",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In merito alla privacy, cosa differenzia motori di ricerca come DuckDuckGo da quelli tradizionali?",
+    "opzioni": ["Sono molto più veloci", "Non tracciano l'attività online dell'utente per fini pubblicitari", "Sono a pagamento", "Funzionano solo su computer fissi"],
+    "rispostaCorretta": "Non tracciano l'attività online dell'utente per fini pubblicitari",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è un rischio legato alla gestione di più identità digitali (es. profilo privato e professionale)?",
+    "opzioni": ["Il rischio di confondere i contesti e pubblicare contenuti inappropriati nel profilo sbagliato", "Il rischio di dover pagare due volte la connessione internet", "Il rischio di rompere lo schermo del PC", "Non esiste alcun rischio"],
+    "rispostaCorretta": "Il rischio di confondere i contesti e pubblicare contenuti inappropriati nel profilo sbagliato",
+    "area": "Area 2"
+  }
+ {
+    "domanda": "In un contesto lavorativo, quale strategia è preferibile per gestire una comunicazione complessa che richiede una spiegazione dettagliata e non urgente?",
+    "opzioni": ["Inviare una serie di brevi messaggi su WhatsApp", "Utilizzare una e-mail ben strutturata (comunicazione asincrona)", "Chiamare immediatamente il collega senza preavviso", "Scrivere un commento pubblico su un social network"],
+    "rispostaCorretta": "Utilizzare una e-mail ben strutturata (comunicazione asincrona)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale tra queste è una funzione avanzata della Posta Elettronica Certificata (PEC) rispetto alla e-mail tradizionale?",
+    "opzioni": ["La possibilità di inviare allegati più grandi di 100GB", "L'attribuzione di valore legale alla trasmissione, equiparata a una raccomandata con ricevuta di ritorno", "La traduzione automatica dei messaggi in tempo reale", "L'invio di messaggi che si autodistruggono dopo la lettura"],
+    "rispostaCorretta": "L'attribuzione di valore legale alla trasmissione, equiparata a una raccomandata con ricevuta di ritorno",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Se un sistema di IA fornisce una risposta che appare corretta ma contiene dati inventati (allucinazione), quale azione intermedia dovrebbe compiere l'utente?",
+    "opzioni": ["Accettare la risposta come vera poiché generata da una macchina", "Verificare le informazioni consultando fonti ufficiali e segnalare l'errore al sistema", "Spegnere il computer e non usare più l'IA", "Condividere immediatamente la risposta sui social"],
+    "rispostaCorretta": "Verificare le informazioni consultando fonti ufficiali e segnalare l'errore al sistema",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In una piattaforma di Cloud Storage, cosa comporta attivare la 'Sincronizzazione Selettiva'?",
+    "opzioni": ["Scegliere quali cartelle scaricare localmente sul PC per risparmiare spazio su disco", "Permettere solo a determinati utenti di vedere i file", "Inviare i file solo quando il computer è collegato via cavo", "Criptare i file con una doppia password"],
+    "rispostaCorretta": "Scegliere quali cartelle scaricare localmente sul PC per risparmiare spazio su disco",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è il vantaggio principale dell'utilizzo di 'Etichette' o 'Filtri' avanzati nella gestione della posta elettronica?",
+    "opzioni": ["Aumentare la velocità di invio dei messaggi", "Automatizzare l'organizzazione dei messaggi in arrivo e facilitarne il reperimento", "Cancellare automaticamente tutte le e-mail più vecchie di un giorno", "Impedire agli hacker di leggere i messaggi"],
+    "rispostaCorretta": "Automatizzare l'organizzazione dei messaggi in arrivo e facilitarne il reperimento",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si intende per 'interoperabilità' tra diverse piattaforme di pubblica amministrazione?",
+    "opzioni": ["L'obbligo di usare lo stesso computer per ogni ufficio", "La capacità dei sistemi informatici di scambiare dati e informazioni in modo efficace", "Il divieto di accedere ai siti governativi da smartphone", "La possibilità di usare una sola password per tutti i social"],
+    "rispostaCorretta": "La capacità dei sistemi informatici di scambiare dati e informazioni in modo efficace",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è la corretta procedura per gestire i permessi di un documento condiviso che deve essere revisionato da un supervisore senza che questi modifichi il testo originale?",
+    "opzioni": ["Fornire il permesso di 'Modifica'", "Fornire il permesso di 'Commentatore'", "Inviare uno screenshot del documento", "Fornire solo l'accesso tramite password"],
+    "rispostaCorretta": "Fornire il permesso di 'Commentatore'",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Perché è importante monitorare regolarmente la propria 'ombra digitale' (digital shadow)?",
+    "opzioni": ["Per verificare che lo schermo non sia troppo luminoso", "Per essere consapevoli dei dati che gli altri o le macchine pubblicano su di noi senza il nostro controllo diretto", "Per aumentare il numero di follower sui social", "Per pulire fisicamente i sensori della webcam"],
+    "rispostaCorretta": "Per essere consapevoli dei dati che gli altri o le macchine pubblicano su di noi senza il nostro controllo diretto",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si intende per 'Data Portability' (Portabilità dei dati) secondo il GDPR?",
+    "opzioni": ["Il diritto di portare il proprio computer all'estero", "Il diritto di ricevere i propri dati in un formato strutturato per trasferirli a un altro fornitore", "L'obbligo di salvare i dati solo su chiavette USB", "La possibilità di stampare tutti i propri post di Facebook"],
+    "rispostaCorretta": "Il diritto di ricevere i propri dati in un formato strutturato per trasferirli a un altro fornitore",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In un sistema di videochiamata professionale, a cosa serve la funzione 'Stanza di attesa' (Waiting Room)?",
+    "opzioni": ["A far riposare il computer tra una chiamata e l'altra", "A permettere all'organizzatore di controllare e ammettere singolarmente i partecipanti per sicurezza", "A visualizzare video pubblicitari prima dell'inizio", "A testare la velocità della connessione dei partecipanti"],
+    "rispostaCorretta": "A permettere all'organizzatore di controllare e ammettere singolarmente i partecipanti per sicurezza",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è l'impatto etico principale degli algoritmi di 'Filter Bubble' sui social media?",
+    "opzioni": ["Migliorano la qualità delle immagini pubblicate", "Isolano l'utente in un ambiente informativo che conferma solo le sue opinioni preesistenti", "Rendono il computer più protetto dai virus", "Aumentano la durata della batteria dello smartphone"],
+    "rispostaCorretta": "Isolano l'utente in un ambiente informativo che conferma solo le sue opinioni preesistenti",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In ambito di collaborazione online, cos'è un sistema di 'Version Control' (controllo di versione)?",
+    "opzioni": ["Un programma per aggiornare Windows", "Un sistema che registra ogni modifica a un file permettendo di risalire a chi ha fatto cosa e quando", "Un software che impedisce la modifica dei file", "Un metodo per rinominare i file aggiungendo la data"],
+    "rispostaCorretta": "Un sistema che registra ogni modifica a un file permettendo di risalire a chi ha fatto cosa e quando",
+    "area": "Area 2"
+  }
+  {
+    "domanda": "Qual è la differenza sostanziale tra 'Rispondi' e 'Rispondi a tutti' in un thread di e-mail professionale?",
+    "opzioni": [
+      "Rispondi invia il messaggio solo al server, Rispondi a tutti a tutti gli utenti del web",
+      "Rispondi invia la comunicazione solo al mittente originale, mentre Rispondi a tutti include tutti i destinatari nei campi A e CC",
+      "Rispondi a tutti cancella automaticamente gli allegati per risparmiare spazio",
+      "Non esiste alcuna differenza, sono termini sinonimi"
+    ],
+    "rispostaCorretta": "Rispondi invia la comunicazione solo al mittente originale, mentre Rispondi a tutti include tutti i destinatari nei campi A e CC",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In un sistema di videochiamata (es. Teams o Zoom), cosa accade se l'organizzatore attiva la funzione 'Mute all' (Silenzia tutti)?",
+    "opzioni": [
+      "Tutti i partecipanti vengono espulsi dalla riunione",
+      "I microfoni di tutti i partecipanti vengono disattivati simultaneamente per evitare rumori di fondo",
+      "Le telecamere dei partecipanti vengono spente per risparmiare banda",
+      "Il volume degli altoparlanti dei partecipanti viene azzerato"
+    ],
+    "rispostaCorretta": "I microfoni di tutti i partecipanti vengono disattivati simultaneamente per evitare rumori di fondo",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale tra i seguenti è un vantaggio tipico del Cloud Storage rispetto al salvataggio su chiavetta USB?",
+    "opzioni": [
+      "Funziona anche senza alcuna connessione a Internet",
+      "Permette l'accesso ai file da qualsiasi dispositivo connesso e facilita la collaborazione in tempo reale",
+      "Garantisce che i file non possano mai essere cancellati per errore",
+      "È l'unico modo per proteggere i file dai virus"
+    ],
+    "rispostaCorretta": "Permette l'accesso ai file da qualsiasi dispositivo connesso e facilita la collaborazione in tempo reale",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si intende per 'Domicilio Digitale' nel contesto del Codice dell'Amministrazione Digitale (CAD)?",
+    "opzioni": [
+      "L'indirizzo IP del proprio computer di casa",
+      "Un indirizzo di posta elettronica certificata (PEC) o un servizio di recapito certificato dove ricevere comunicazioni legali dalla PA",
+      "La posizione GPS salvata sullo smartphone",
+      "Il profilo social principale utilizzato per scopi ufficiali"
+    ],
+    "rispostaCorretta": "Un indirizzo di posta elettronica certificata (PEC) o un servizio di recapito certificato dove ricevere comunicazioni legali dalla PA",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è il compito principale del 'Difensore Civico per il Digitale' in Italia?",
+    "opzioni": [
+      "Riparare i computer dei cittadini a basso reddito",
+      "Ricevere segnalazioni su violazioni dei diritti di cittadinanza digitale e intervenire presso le PA inadempienti",
+      "Scrivere le leggi sulla privacy per il Parlamento",
+      "Gestire le password degli account SPID dei cittadini"
+    ],
+    "rispostaCorretta": "Ricevere segnalazioni su violazioni dei diritti di cittadinanza digitale e intervenire presso le PA inadempienti",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Perché è utile consultare la 'Cronologia delle versioni' in un documento condiviso (es. Google Docs o Word Online)?",
+    "opzioni": [
+      "Per vedere quante persone hanno letto il documento senza modificarlo",
+      "Per visualizzare le modifiche passate, vedere chi le ha effettuate e, se necessario, ripristinare una versione precedente",
+      "Per cambiare il colore di sfondo del documento in base all'ora del giorno",
+      "Per inviare automaticamente il documento in stampa"
+    ],
+    "rispostaCorretta": "Per visualizzare le modifiche passate, vedere chi le ha effettuate e, se necessario, ripristinare una versione precedente",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa sono i 'Cookie di terze parti'?",
+    "opzioni": [
+      "Virus che rallentano la navigazione",
+      "Cookie installati da un dominio diverso da quello che l'utente sta visitando, spesso usati per il tracciamento pubblicitario",
+      "File che contengono le ricette preferite dell'utente",
+      "Piccoli programmi che aggiornano automaticamente il browser"
+    ],
+    "rispostaCorretta": "Cookie installati da un dominio diverso da quello che l'utente sta visitando, spesso usati per il tracciamento pubblicitario",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In una chat di gruppo, qual è il rischio principale della 'cancellazione a catena' legata alla sincronizzazione cloud?",
+    "opzioni": [
+      "Che il telefono si surriscaldi",
+      "Che eliminando un file da un dispositivo, questo venga rimosso automaticamente da tutti gli altri dispositivi sincronizzati",
+      "Che il messaggio venga letto da persone non autorizzate",
+      "Non esiste alcun rischio di questo tipo"
+    ],
+    "rispostaCorretta": "Che eliminando un file da un dispositivo, questo venga rimosso automaticamente da tutti gli altri dispositivi sincronizzati",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "A cosa serve l'Anagrafe Nazionale della Popolazione Residente (ANPR)?",
+    "opzioni": [
+      "A prenotare visite mediche specialistiche",
+      "A consentire ai cittadini di visualizzare i propri dati anagrafici e scaricare certificati online in modo autonomo",
+      "A monitorare gli accessi ai social network",
+      "A pagare le tasse universitarie"
+    ],
+    "rispostaCorretta": "A consentire ai cittadini di visualizzare i propri dati anagrafici e scaricare certificati online in modo autonomo",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è una corretta strategia per costruire un'identità online positiva?",
+    "opzioni": [
+      "Pubblicare tutto ciò che accade nella propria vita privata senza filtri",
+      "Curare i contenuti condivisi, utilizzare profili distinti per scopi personali e professionali e rispettare la netiquette",
+      "Cambiare nome e cognome ogni mese",
+      "Non pubblicare mai nulla e cancellare ogni traccia di sé"
+    ],
+    "rispostaCorretta": "Curare i contenuti condivisi, utilizzare profili distinti per scopi personali e professionali e rispettare la netiquette",
+    "area": "Area 2"
+  }
+  {
+    "domanda": "Quale segnale può aiutare un utente a identificare che sta interagendo con un chatbot (IA) invece che con un essere umano?",
+    "opzioni": ["La presenza di errori di battitura casuali", "L'immediatezza della risposta h24 e l'uso di un linguaggio estremamente standardizzato", "La richiesta di inviare un fax per conferma", "L'incapacità del sistema di leggere file PDF"],
+    "rispostaCorretta": "L'immediatezza della risposta h24 e l'uso di un linguaggio estremamente standardizzato",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è lo scopo principale del fornire un feedback (pollice su/giù) a una risposta generata da un'IA?",
+    "opzioni": ["Cancellare la risposta dal database mondiale", "Aiutare il sistema ad apprendere e migliorare la pertinenza delle risposte future", "Ottenere un rimborso sul canone internet", "Aumentare la velocità di download del browser"],
+    "rispostaCorretta": "Aiutare il sistema ad apprendere e migliorare la pertinenza delle risposte future",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Secondo il syllabus, quale rischio etico comporta l'uso di dati pubblici per l'addestramento dell'IA?",
+    "opzioni": ["Il rischio che il computer si spenga improvvisamente", "Il rischio di violazione della privacy e l'uso di informazioni personali senza un consenso esplicito per tale scopo", "L'obbligo di pagare una tassa per ogni dato condiviso", "Nessun rischio, i dati pubblici sono per definizione privi di copyright"],
+    "rispostaCorretta": "Il rischio di violazione della privacy e l'uso di informazioni personali senza un consenso esplicito per tale scopo",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In Italia, che valore ha un documento sottoscritto con Firma Digitale rispetto a uno con firma autografa?",
+    "opzioni": ["Ha un valore puramente informativo e non legale", "Ha lo stesso valore legale della firma autografa e garantisce autenticità e integrità", "Vale solo se accompagnato da una marca da bollo cartacea", "Vale solo se il destinatario è un ente privato"],
+    "rispostaCorretta": "Ha lo stesso valore legale della firma autografa e garantisce autenticità e integrità",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa indica il termine 'ricetta dematerializzata' nel sistema sanitario italiano?",
+    "opzioni": ["Una ricetta medica scritta a mano e poi distrutta", "La versione elettronica della ricetta cartacea, associata a un Numero di Ricetta Elettronica (NRE)", "Un consiglio dietetico inviato via mail", "Un documento che non richiede l'uso della tessera sanitaria"],
+    "rispostaCorretta": "La versione elettronica della ricetta cartacea, associata a un Numero di Ricetta Elettronica (NRE)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale funzione permette a un cittadino di visualizzare referti, vaccini e verbali di pronto soccorso in un unico ambiente digitale?",
+    "opzioni": ["Il sito dell'INPS", "Il Fascicolo Sanitario Elettronico (FSE)", "Il portale dell'Agenzia delle Entrate", "La propria pagina profilo di Facebook"],
+    "rispostaCorretta": "Il Fascicolo Sanitario Elettronico (FSE)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cos'è il crowdsourcing nel contesto della cittadinanza digitale?",
+    "opzioni": ["Un attacco informatico basato sull'invio di troppi dati", "La raccolta di idee, servizi o contenuti sollecitando contributi da un grande gruppo di persone online", "Un metodo per vendere prodotti in stock", "Il download illegale di software"],
+    "rispostaCorretta": "La raccolta di idee, servizi o contenuti sollecitando contributi da un grande gruppo di persone online",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa sono strumenti come Mural o Miro utilizzati durante una collaborazione a distanza?",
+    "opzioni": ["Software per il montaggio video", "Lavagne virtuali condivise per facilitare il brainstorming e la progettazione visiva", "Sistemi di protezione contro lo spam", "Piattaforme per l'invio di newsletter"],
+    "rispostaCorretta": "Lavagne virtuali condivise per facilitare il brainstorming e la progettazione visiva",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "A cosa serve l'integrazione di un sistema di sondaggi (es. Google Moduli) in un progetto di gruppo?",
+    "opzioni": ["A contare i click sul sito aziendale", "A raccogliere pareri, dati o votazioni dai membri o dal pubblico in modo strutturato", "A bloccare l'accesso ai documenti non autorizzati", "A misurare la temperatura della stanza"],
+    "rispostaCorretta": "A raccogliere pareri, dati o votazioni dai membri o dal pubblico in modo strutturato",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In termini di accessibilità digitale, cosa si intende per 'inclusione sensoriale' nelle comunicazioni?",
+    "opzioni": ["L'uso di colori molto brillanti per attirare l'attenzione", "Progettare contenuti fruibili anche da persone con disabilità visive o uditive (es. sottotitoli o lettori di schermo)", "L'obbligo di usare solo messaggi vocali", "L'acquisto di monitor ad altissima risoluzione"],
+    "rispostaCorretta": "Progettare contenuti fruibili anche da persone con disabilità visive o uditive (es. sottotitoli o lettori di schermo)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è il significato culturale dell'uso di una GIF o di un'emoji in un contesto lavorativo?",
+    "opzioni": ["È sempre un segnale di mancanza di professionalità", "Aggiunge una componente non verbale che può chiarire il tono del messaggio, ma va usata con consapevolezza del contesto", "Serve a nascondere errori grammaticali", "Rallenta la ricezione del messaggio da parte del server"],
+    "rispostaCorretta": "Aggiunge una componente non verbale che può chiarire il tono del messaggio, ma va usata con consapevolezza del contesto",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa prevede il 'Diritto all'oblio' nel contesto dell'identità digitale?",
+    "opzioni": ["Il diritto di dimenticare la propria password", "Il diritto di richiedere la rimozione di informazioni personali che non sono più pertinenti o sono obsolete dai risultati di ricerca", "L'obbligo di cancellare la cronologia ogni giorno", "Il diritto di non essere contattati dalla Pubblica Amministrazione"],
+    "rispostaCorretta": "Il diritto di richiedere la rimozione di informazioni personali che non sono più pertinenti o sono obsolete dai risultati di ricerca",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale precauzione è fondamentale adottare prima di effettuare un pagamento su un sito di e-commerce?",
+    "opzioni": ["Spegnere il Wi-Fi e usare il Bluetooth", "Verificare che l'indirizzo inizi con 'https' e che ci sia l'icona del lucchetto, oltre a usare metodi di pagamento sicuri", "Inviare una foto della propria carta d'identità al venditore via chat", "Usare solo la tastiera virtuale di Windows"],
+    "rispostaCorretta": "Verificare che l'indirizzo inizi con 'https' e che ci sia l'icona del lucchetto, oltre a usare metodi di pagamento sicuri",
+    "area": "Area 2"
+  }
+  {
+    "domanda": "In qualità di amministratore di un gruppo di lavoro, quale azione è prioritaria per garantire la compliance al GDPR quando si condividono documenti contenenti dati sensibili su un cloud pubblico?",
+    "opzioni": [
+      "Proteggere i file con una password semplice e condividerla via chat",
+      "Configurare permessi di accesso granulari, attivare la crittografia e verificare che il fornitore cloud garantisca la residenza dei dati in UE",
+      "Rendere il documento pubblico per facilitare l'accesso a tutti i collaboratori",
+      "Limitarsi a cambiare il nome del file per renderlo irriconoscibile"
+    ],
+    "rispostaCorretta": "Configurare permessi di accesso granulari, attivare la crittografia e verificare che il fornitore cloud garantisca la residenza dei dati in UE",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa si intende per 'diritto alla partecipazione elettronica' sancito dal Codice dell'Amministrazione Digitale (CAD)?",
+    "opzioni": [
+      "L'obbligo di avere un profilo social per votare alle elezioni politiche",
+      "Il diritto dei cittadini di utilizzare le tecnologie per interagire con la PA e partecipare ai processi decisionali pubblici",
+      "La possibilità di connettersi gratuitamente al Wi-Fi in ogni ufficio pubblico",
+      "Il diritto di ricevere un computer in comodato d'uso dallo Stato"
+    ],
+    "rispostaCorretta": "Il diritto dei cittadini di utilizzare le tecnologie per interagire con la PA e partecipare ai processi decisionali pubblici",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è la differenza tecnica e legale tra una Firma Elettronica Avanzata (FEA) e una Firma Elettronica Qualificata (FEQ/Firma Digitale)?",
+    "opzioni": [
+      "Non c'è differenza, sono termini usati per lo stesso strumento",
+      "La FEQ si basa su un certificato qualificato e un dispositivo sicuro (smart card/token), garantendo la massima efficacia probatoria",
+      "La FEA è utilizzabile solo su documenti cartacei scannerizzati",
+      "La FEQ è l'unica che permette di inviare e-mail certificate"
+    ],
+    "rispostaCorretta": "La FEQ si basa su un certificato qualificato e un dispositivo sicuro (smart card/token), garantendo la massima efficacia probatoria",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In una strategia di comunicazione aziendale, quando è tecnicamente necessario l'uso del campo 'Ccn' (Copia Conoscenza Nascosta)?",
+    "opzioni": [
+      "Per inviare un messaggio a un numero elevato di destinatari esterni senza che questi vedano gli indirizzi e-mail degli altri, tutelando la privacy",
+      "Per nascondere il mittente principale della mail",
+      "Per evitare che gli allegati vengano scaricati dai destinatari secondari",
+      "Per garantire che la mail non finisca nella cartella spam del destinatario"
+    ],
+    "rispostaCorretta": "Per inviare un messaggio a un numero elevato di destinatari esterni senza che questi vedano gli indirizzi e-mail degli altri, tutelando la privacy",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Quale scenario descrive correttamente una violazione dei diritti digitali gestibile tramite il 'Difensore Civico per il Digitale'?",
+    "opzioni": [
+      "Un sito di e-commerce privato che non accetta il reso di un prodotto",
+      "Una Pubblica Amministrazione che non consente l'accesso ai propri servizi tramite SPID o CIE nonostante l'obbligo di legge",
+      "Un utente che riceve insulti su un social network da un privato cittadino",
+      "Il malfunzionamento del router domestico durante una sessione di smart working"
+    ],
+    "rispostaCorretta": "Una Pubblica Amministrazione che non consente l'accesso ai propri servizi tramite SPID o CIE nonostante l'obbligo di legge",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa comporta il concetto di 'Interoperabilità' tra i sistemi sanitari regionali e il Fascicolo Sanitario Elettronico (FSE) nazionale?",
+    "opzioni": [
+      "L'obbligo per il cittadino di risiedere nella regione dove ha aperto il fascicolo",
+      "La possibilità per un medico di una regione diversa di consultare la storia clinica del paziente in caso di emergenza, previo consenso",
+      "La fusione di tutti i server sanitari in un unico computer centralizzato a Roma",
+      "L'impossibilità di usare la tessera sanitaria fuori dal comune di residenza"
+    ],
+    "rispostaCorretta": "La possibilità per un medico di una regione diversa di consultare la storia clinica del paziente in caso di emergenza, previo consenso",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Nell'ambito dell'IA, cosa si intende per 'bias algoritmico' nelle comunicazioni digitali?",
+    "opzioni": [
+      "Un errore di programmazione che impedisce all'IA di connettersi a internet",
+      "Un pregiudizio sistematico nei dati di addestramento che porta l'IA a generare risposte discriminatorie o parziali",
+      "La capacità dell'IA di tradurre istantaneamente qualsiasi lingua",
+      "L'eccessivo consumo di memoria RAM durante l'elaborazione di un testo"
+    ],
+    "rispostaCorretta": "Un pregiudizio sistematico nei dati di addestramento che porta l'IA a generare risposte discriminatorie o parziali",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è la procedura corretta per esercitare il 'Diritto alla portabilità dei dati' (Art. 20 GDPR) presso un social network?",
+    "opzioni": [
+      "Cancellare l'account e sperare che i dati vengano inviati per posta",
+      "Richiedere l'esportazione dei propri dati in un formato strutturato, di uso comune e leggibile da dispositivo automatico (es. JSON o XML)",
+      "Inviare uno screenshot di ogni conversazione al nuovo fornitore di servizi",
+      "Chiedere al Garante della Privacy di copiare manualmente i messaggi"
+    ],
+    "rispostaCorretta": "Richiedere l'esportazione dei propri dati in un formato strutturato, di uso comune e leggibile da dispositivo automatico (es. JSON o XML)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In una videochiamata professionale con 50 partecipanti, quale configurazione tecnica ottimizza la banda e riduce le interruzioni?",
+    "opzioni": [
+      "Chiedere a tutti di tenere la videocamera attiva alla massima risoluzione",
+      "Disattivare i microfoni dei non parlanti e utilizzare la funzione 'Alza la mano' per gestire i turni di parola",
+      "Utilizzare una connessione Bluetooth per trasmettere il video",
+      "Registrare la chiamata e inviarla in tempo reale via e-mail a tutti"
+    ],
+    "rispostaCorretta": "Disattivare i microfoni dei non parlanti e utilizzare la funzione 'Alza la mano' per gestire i turni di parola",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa definisce il concetto di 'Shadow IT' in un contesto di collaborazione aziendale?",
+    "opzioni": [
+      "L'uso di software e servizi cloud da parte dei dipendenti senza l'approvazione o il controllo del dipartimento IT dell'organizzazione",
+      "La creazione di copie di backup dei file durante le ore notturne",
+      "L'attacco informatico volto a oscurare i siti web istituzionali",
+      "Un sistema di monitoraggio dei dipendenti tramite webcam"
+    ],
+    "rispostaCorretta": "L'uso di software e servizi cloud da parte dei dipendenti senza l'approvazione o il controllo del dipartimento IT dell'organizzazione",
+    "area": "Area 2"
+  }
+  {
+    "domanda": "Secondo il GDPR, quale diritto esercita un cittadino quando richiede a una PA di trasferire i propri dati previdenziali a un ente privato in formato leggibile?",
+    "opzioni": [
+      "Diritto di rettifica",
+      "Diritto alla portabilità dei dati (Art. 20)",
+      "Diritto all'opposizione",
+      "Diritto di limitazione del trattamento"
+    ],
+    "rispostaCorretta": "Diritto alla portabilità dei dati (Art. 20)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è la funzione del Registro delle Opposizioni nel contesto della privacy e dei servizi digitali?",
+    "opzioni": [
+      "Impedire l'accesso ai siti web governativi",
+      "Permettere al cittadino di opporsi al trattamento dei propri dati per fini di telemarketing",
+      "Cancellare i debiti fiscali registrati presso l'Agenzia delle Entrate",
+      "Bloccare la ricezione di messaggi istituzionali su IO"
+    ],
+    "rispostaCorretta": "Permettere al cittadino di opporsi al trattamento dei propri dati per fini di telemarketing",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Nel portale ANPR, quale principio del GDPR garantisce che un cittadino possa correggere un errore di residenza nei registri nazionali?",
+    "opzioni": [
+      "Principio di minimizzazione dei dati",
+      "Diritto di rettifica (Art. 16)",
+      "Principio di limitazione della conservazione",
+      "Diritto di accesso dell'interessato"
+    ],
+    "rispostaCorretta": "Diritto di rettifica (Art. 16)",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Qual è il ruolo del Responsabile della Protezione dei Dati (DPO) all'interno di una Pubblica Amministrazione?",
+    "opzioni": [
+      "Gestire le password degli utenti",
+      "Monitorare l'osservanza del GDPR e fornire consulenza sulla protezione dei dati personali",
+      "Eseguire i pagamenti tramite PagoPA",
+      "Riparare i server del portale istituzionale"
+    ],
+    "rispostaCorretta": "Monitorare l'osservanza del GDPR e fornire consulenza sulla protezione dei dati personali",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "In base al CAD, quale sistema di autenticazione garantisce il massimo livello di sicurezza (Livello 3) per l'accesso ai dati sensibili?",
+    "opzioni": [
+      "Accesso con Username e Password semplice",
+      "CIE (Carta d'Identità Elettronica) o SPID con hardware dedicato",
+      "Accesso tramite profilo social (Facebook/Google)",
+      "Non esistono livelli di sicurezza differenziati"
+    ],
+    "rispostaCorretta": "CIE (Carta d'Identità Elettronica) o SPID con hardware dedicato",
+    "area": "Area 2"
+  },
+  {
+    "domanda": "Cosa prevede il principio di 'Minimizzazione dei dati' applicato a un portale di e-government?",
+    "opzioni": [
+      "Che il portale debba occupare meno spazio possibile sul disco rigido",
+      "Che debbano essere raccolti solo i dati strettamente necessari per erogare lo specifico servizio richiesto",
+      "Che le scritte sul sito debbano essere di dimensioni ridotte",
+      "Che il numero di utenti che accedono contemporaneamente debba essere limitato"
+    ],
+    "rispostaCorretta": "Che debbano essere raccolti solo i dati strettamente necessari per erogare lo specifico servizio richiesto",
+    "area": "Area 2"
+  }
+    ];
 let domandeSelezionate = []; // Le 30 domande per il quiz corrente
 let risposteUtente = []; // Array per tracciare le risposte date
 let indiceCorrente = 0; // Indice della domanda corrente
