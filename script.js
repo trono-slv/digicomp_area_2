@@ -183,7 +183,7 @@ let paniereCompleto = [
 "opzioni": ["Una telefonata circolare", "Uno strumento di sondaggio (come Doodle)", "Un post su un social network pubblico", "Un messaggio vocale di 10 minuti"],
 "rispostaCorretta": "Uno strumento di sondaggio (come Doodle)",
 "area": "Area 2"
-}
+},
 {
     "domanda": "Secondo il manuale AICA, che cos'è il 'Cloud'?",
     "opzioni": ["Un dispositivo fisico da collegare al router", "Uno spazio di archiviazione e servizi accessibili via internet su server remoti", "Un programma per stampare documenti a distanza", "Un sistema per velocizzare il processore del computer"],
@@ -333,7 +333,7 @@ let paniereCompleto = [
     "opzioni": ["Nessun diritto specifico", "Il diritto di non essere soggetti a decisioni basate esclusivamente su processi automatizzati", "Il diritto di ricevere un computer nuovo ogni anno", "Il diritto di non pagare i servizi online"],
     "rispostaCorretta": "Il diritto di non essere soggetti a decisioni basate esclusivamente su processi automatizzati",
     "area": "Area 2"
-  }
+  },
   {
     "domanda": "Secondo il syllabus, cosa offrono le piattaforme online per la sostenibilità ai cittadini?",
     "opzioni": ["Sconti per l'acquisto di prodotti di plastica", "L'opportunità di partecipare ad azioni per l'innovazione a livello locale o internazionale", "L'obbligo di spegnere il computer per 10 ore al giorno", "La possibilità di stampare documenti cartacei gratuitamente"],
@@ -603,7 +603,7 @@ let paniereCompleto = [
     "opzioni": ["Un programma per aggiornare Windows", "Un sistema che registra ogni modifica a un file permettendo di risalire a chi ha fatto cosa e quando", "Un software che impedisce la modifica dei file", "Un metodo per rinominare i file aggiungendo la data"],
     "rispostaCorretta": "Un sistema che registra ogni modifica a un file permettendo di risalire a chi ha fatto cosa e quando",
     "area": "Area 2"
-  }
+  },
     {
     "domanda": "Quale segnale può aiutare un utente a identificare che sta interagendo con un chatbot (IA) invece che con un essere umano?",
     "opzioni": ["La presenza di errori di battitura casuali", "L'immediatezza della risposta h24 e l'uso di un linguaggio estremamente standardizzato", "La richiesta di inviare un fax per conferma", "L'incapacità del sistema di leggere file PDF"],
