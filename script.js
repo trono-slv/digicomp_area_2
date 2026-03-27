@@ -681,6 +681,726 @@ let paniereCompleto = [
     "opzioni": ["Spegnere il Wi-Fi e usare il Bluetooth", "Verificare che l'indirizzo inizi con 'https' e che ci sia l'icona del lucchetto, oltre a usare metodi di pagamento sicuri", "Inviare una foto della propria carta d'identità al venditore via chat", "Usare solo la tastiera virtuale di Windows"],
     "rispostaCorretta": "Verificare che l'indirizzo inizi con 'https' e che ci sia l'icona del lucchetto, oltre a usare metodi di pagamento sicuri",
     "area": "Area 2"
+  },
+    {
+    "domanda": "Cosa si intende per netiquette?",
+    "opzioni": [      "Regole di buona educazione negli ambienti digitali",
+      "Norme per la sicurezza informatica",
+      "Linee guida per la programmazione",
+      "Standard per la stampa digitale"
+    ],
+    "rispostaCorretta": "Regole di buona educazione negli ambienti digitali",
+    "spiegazione": "La netiquette definisce norme di comportamento rispettoso online. Syllabus Area 2 enfatizza comunicazione appropriata[2][documento].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Quale tono usare con i dirigenti via email?",
+    "opzioni": [      "Formale e rispettoso con dati concreti",
+      "Casuale con emoji",
+      "Molto breve senza saluti",
+      "Solo allegati senza testo"
+    ],
+    "rispostaCorretta": "Formale e rispettoso con dati concreti",
+    "spiegazione": "Comunicazione gerarchica richiede professionalità. Syllabus raccomanda supporto con argomentazioni solide[documento].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Cosa sono i messaggi non verbali digitali?",
+    "opzioni": [      "Emoji, GIF e reazioni",
+      "Solo testo scritto",
+      "File audio registrati",
+      "Allegati immagine"
+    ],
+    "rispostaCorretta": "Emoji, GIF e reazioni",
+    "spiegazione": "Trasmettono emozioni senza parole. Importanti per comprendere il tono nei contesti digitali[documento].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come si invia un messaggio vocale su WhatsApp?",
+    "opzioni": [      "Tenere premuto l'icona microfono",
+      "Scrivere 'audio' nel testo",
+      "Selezionare 'chiamata'",
+      "Inviare foto del microfono"
+    ],
+    "rispostaCorretta": "Tenere premuto l'icona microfono",
+    "spiegazione": "Registrazione diretta premendo microfono. Procedura standard messaggistica istantanea[syllabus p.59].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Qual è il ruolo del facilitatore online?",
+    "opzioni": [      "Moderare e strutturare discussioni",
+      "Votare su ogni proposta",
+      "Inviare solo link esterni",
+      "Chiudere tutte le chat"
+    ],
+    "rispostaCorretta": "Moderare e strutturare discussioni",
+    "spiegazione": "Garantisce partecipazione equa e produttività. Responsabilità chiave syllabus[syllabus p.86].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come condividi un calendario con colleghi?",
+    "opzioni": [      "Usando Google Calendar o Doodle",
+      "Fotografando carta stampata",
+      "Email con screenshot",
+      "Chiamata telefonica"
+    ],
+    "rispostaCorretta": "Usando Google Calendar o Doodle",
+    "spiegazione": "Strumenti digitali per concordare date. Syllabus collaborazione a distanza[syllabus p.92].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Cosa significa 'inoltra' in email?",
+    "opzioni": [      "Inviare messaggio ricevuto ad altro contatto",
+      "Eliminare dalla casella",
+      "Modificare il contenuto",
+      "Salvare in bozza"
+    ],
+    "rispostaCorretta": "Inviare messaggio ricevuto ad altro contatto",
+    "spiegazione": "Condividi contenuti ricevuti. Funzione base comunicazione digitale[1].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Quale stile con clienti digitali?",
+    "opzioni": [      "Cordiale e professionale",
+      "Solo formale senza saluti",
+      "Casuale con slang",
+      "Risposte ritardate"
+    ],
+    "rispostaCorretta": "Cordiale e professionale",
+    "spiegazione": "Bilancia cortesia e competenza. Adatta alle esigenze cliente[syllabus].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come accedi al Fascicolo Sanitario Elettronico?",
+    "opzioni": [      "Con SPID, CIE o CNS",
+      "Password personale semplice",
+      "Email e PIN",
+      "Carta fedeltà"
+    ],
+    "rispostaCorretta": "Con SPID, CIE o CNS",
+    "spiegazione": "Autenticazione forte per documenti sanitari. Portali regionali[syllabus p.86].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Cosa sono le emoji in chat?",
+    "opzioni": [      "Messaggi non verbali per emozioni",
+      "Sostituti del testo completo",
+      "Link a siti web",
+      "Comandi di formattazione"
+    ],
+    "rispostaCorretta": "Messaggi non verbali per emozioni",
+    "spiegazione": "Integrano il testo trasmettendo tono. Parte netiquette[syllabus p.124].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come commenti un documento condiviso?",
+    "opzioni": [      "Aggiungi note senza modificare testo",
+      "Riscrivi l'intero paragrafo",
+      "Invia email separata",
+      "Elimina contenuto originale"
+    ],
+    "rispostaCorretta": "Aggiungi note senza modificare testo",
+    "spiegazione": "Feedback collaborativo preserva originale. Google Docs/Teams[syllabus p.93].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Quale vantaggio della comunicazione asincrona?",
+    "opzioni": [      "Flessibilità oraria per tutti",
+      "Risposta immediata obbligatoria",
+      "Solo per emergenze",
+      "Sempre in video"
+    ],
+    "rispostaCorretta": "Flessibilità oraria per tutti",
+    "spiegazione": "Email/report permettono interazioni non simultanee. Syllabus flessibilità[syllabus p.128].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come condividi schermo in Teams?",
+    "opzioni": [      "Seleziona 'Condividi contenuto'",
+      "Invia screenshot",
+      "Stampa e fotografa",
+      "Email slide"
+    ],
+    "rispostaCorretta": "Seleziona 'Condividi contenuto'",
+    "spiegazione": "Mostra live durante videoconferenza. Collaborazione reale time[syllabus p.93].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Oggetto email: funzione principale?",
+    "opzioni": [      "Riassumere contenuto per gestione rapida",
+      "Decorazione con emoji",
+      "Opzionale sempre",
+      "Solo nome mittente"
+    ],
+    "rispostaCorretta": "Riassumere contenuto per gestione rapida",
+    "spiegazione": "Aiuta destinatario prioritizzare. Buona pratica professionale[2].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Comunicazione con colleghi: stile?",
+    "opzioni": [      "Professionale, chiaro e tempestivo",
+      "Sempre informale",
+      "Risposte settimanali",
+      "Solo gruppi social"
+    ],
+    "rispostaCorretta": "Professionale, chiaro e tempestivo",
+    "spiegazione": "Obiettivo: informare e collaborare. Syllabus comportamento colleghi[documento].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+    {
+    "domanda": "Quale strumento usi per pianificare riunioni online?",
+    "opzioni": [      "Calendario condiviso come Google Calendar",
+      "Foglio Excel cartaceo",
+      "Messaggi WhatsApp casuali",
+      "Chiamata telefonica singola"
+    ],
+    "rispostaCorretta": "Calendario condiviso come Google Calendar",
+    "spiegazione": "Permette sincronizzazione e conferme automatiche. Syllabus collaborazione digitale[1][2].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come annulli un messaggio vocale in registrazione?",
+    "opzioni": [      "Scorri verso sinistra (WhatsApp)",
+      "Premi cancella testo",
+      "Invia e poi elimina",
+      "Riavvia app"
+    ],
+    "rispostaCorretta": "Scorri verso sinistra (WhatsApp)",
+    "spiegazione": "Cancella senza inviare. Procedura standard messaggistica[syllabus p.59].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Cosa visualizzi nell'area riservata e-government?",
+    "opzioni": [      "Dati personali e documenti",
+      "Solo notizie generali",
+      "Pubblicità commerciale",
+      "Giochi online"
+    ],
+    "rispostaCorretta": "Dati personali e documenti",
+    "spiegazione": "Accesso sicuro a informazioni individuali. Portali istituzionali[syllabus p.84].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Quale responsabilità del facilitatore?",
+    "opzioni": [      "Pianificare agenda e moderare",
+      "Decidere tutte le scelte",
+      "Solo osservare",
+      "Inviare spam"
+    ],
+    "rispostaCorretta": "Pianificare agenda e moderare",
+    "spiegazione": "Struttura discussioni produttive. Ruolo chiave gruppi online[syllabus p.86].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come paghi servizi e-government?",
+    "opzioni": [      "Piattaforma pagamento online integrata",
+      "Bonifico bancario manuale",
+      "Contanti in posta",
+      "Assegno"
+    ],
+    "rispostaCorretta": "Piattaforma pagamento online integrata",
+    "spiegazione": "Servizi digitali PA. Funzionalità standard[syllabus p.88].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Quale canale per segnalare violazioni digitali PA?",
+    "opzioni": [      "Difensore Civico Digitale",
+      "Social media pubblici",
+      "Amici personali",
+      "Quotidiani"
+    ],
+    "rispostaCorretta": "Difensore Civico Digitale",
+    "spiegazione": "Canale ufficiale per diritti cittadinanza digitale. Syllabus consapevolezza[syllabus p.108].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come usi ricette digitali dematerializzate?",
+    "opzioni": [      "Visualizzi e presenti codice al farmacista",
+      "Stampi sempre su carta",
+      "Fotografi prescrizione",
+      "Chiama medico"
+    ],
+    "rispostaCorretta": "Visualizzi e presenti codice al farmacista",
+    "spiegazione": "Sistema e-Health nazionale. Ricette elettroniche[syllabus p.88].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Cosa fa Trello per collaborazione?",
+    "opzioni": [      "Organizza task con bacheche e liste",
+      "Solo chat testuale",
+      "Email automatiche",
+      "Videochiamate"
+    ],
+    "rispostaCorretta": "Organizza task con bacheche e liste",
+    "spiegazione": "Gestione progetti visiva. Strumento syllabus[syllabus p.98].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come accedi Agenzia Entrate per redditi?",
+    "opzioni": [      "Portale con SPID e scarica dichiarazione",
+      "Chiedi a commercialista",
+      "Email richiesta",
+      "Ufficio fisico"
+    ],
+    "rispostaCorretta": "Portale con SPID e scarica dichiarazione",
+    "spiegazione": "Servizi telematici fiscali. Accesso sicuro[syllabus p.89].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Quale funzione Slack principale?",
+    "opzioni": [      "Messaggistica team in tempo reale",
+      "Archiviazione file sola",
+      "Calendario personale",
+      "Videogiochi"
+    ],
+    "rispostaCorretta": "Messaggistica team in tempo reale",
+    "spiegazione": "Comunicazione asincrona/sincrona. Piattaforma collaborativa[syllabus p.98].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come visualizzi FSE documenti sanitari?",
+    "opzioni": [      "Portale regionale con SPID",
+      "App generica salute",
+      "Email medico",
+      "Farmacia fisica"
+    ],
+    "rispostaCorretta": "Portale regionale con SPID",
+    "spiegazione": "Fascicolo Sanitario Elettronico regionale. Accesso autenticato[syllabus p.85].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Cosa sono Asana per team?",
+    "opzioni": [      "Gestione progetti con compiti e milestone",
+      "Solo videoconferenze",
+      "Backup dati",
+      "Antivirus"
+    ],
+    "rispostaCorretta": "Gestione progetti con compiti e milestone",
+    "spiegazione": "Tracciamento avanzato lavoro. Syllabus strumenti[syllabus p.98].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come prenoti visite su e-Health?",
+    "opzioni": [      "Portale regionale con ricerca e pagamento",
+      "Telefono CUP",
+      "Medico di base",
+      "Farmacia"
+    ],
+    "rispostaCorretta": "Portale regionale con ricerca e pagamento",
+    "spiegazione": "Prenotazioni digitali sanitarie. Funzionalità e-government[syllabus p.87].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Quale etichetta per gruppi discussione?",
+    "opzioni": [      "Partecipazione equa e rispettosa",
+      "Solo leader parla",
+      "Messaggi off-topic",
+      "Spam link"
+    ],
+    "rispostaCorretta": "Partecipazione equa e rispettosa",
+    "spiegazione": "Netiquette gruppi online. Facilitatore promuove[syllabus p.86].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+  {
+    "domanda": "Come scarichi certificato ANPR?",
+    "opzioni": [      "Anagrafe Popolazione Residente online",
+      "Comune cartaceo",
+      "Polizia",
+      "Notaio"
+    ],
+    "rispostaCorretta": "Anagrafe Popolazione Residente online",
+    "spiegazione": "Servizi digitali anagrafici. Accesso SPID[syllabus p.89].",
+    "area": "Area 2",
+    "livello": "Base"
+  },
+    {
+    "domanda": "Quale differenza tra comunicazione sincrona e asincrona?",
+    "opzioni": [      "Sincrona: tempo reale; asincrona: differito",
+      "Sincrona: email; asincrona: chat",
+      "Sincrona: solo video; asincrona: audio",
+      "Nessuna differenza"
+    ],
+    "rispostaCorretta": "Sincrona: tempo reale; asincrona: differito",
+    "spiegazione": "Chat/videoconferenza (sincrona) vs email/report (asincrona). Scelta consapevole DigComp 2.1[1][8].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Come gestisci dominatore discussione online?",
+    "opzioni": [      "Facilitatore interviene per equità",
+      "Ignori e continui",
+      "Espelli immediatamente",
+      "Cambia argomento"
+    ],
+    "rispostaCorretta": "Facilitatore interviene per equità",
+    "spiegazione": "Moderazione mantiene produttività. Responsabilità facilitatore[1][5].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Vantaggio PEC vs email ordinaria per PA?",
+    "opzioni": [      "Valore legale equiparato raccomandata",
+      "Più veloce invio",
+      "Gratis illimitata",
+      "Allegati più grandi"
+    ],
+    "rispostaCorretta": "Valore legale equiparato raccomandata",
+    "spiegazione": "Comunicazione ufficiale amministrazioni. DigComp intermedio[6].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Come assegni task in Trello?",
+    "opzioni": [      "Trascina card tra liste e assegna membri",
+      "Invia email separata",
+      "Chat privata",
+      "Commento generico"
+    ],
+    "rispostaCorretta": "Trascina card tra liste e assegna membri",
+    "spiegazione": "Gestione visiva progetti. Strumento collaborativo intermedio[2].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Quale prassi netiquette per feedback?",
+    "opzioni": [      "Costruttivo, specifico e privato",
+      "Pubblico sempre",
+      "Solo emoji",
+      "Ignora errori"
+    ],
+    "rispostaCorretta": "Costruttivo, specifico e privato",
+    "spiegazione": "Migliora relazioni digitali. DigComp comunicazione[4][5].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Come risolvi conflitto chat gruppo lavoro?",
+    "opzioni": [      "Chiama videoconferenza chiarimenti",
+      "Elimina messaggi",
+      "Blocco partecipanti",
+      "Cambia gruppo"
+    ],
+    "rispostaCorretta": "Chiama videoconferenza chiarimenti",
+    "spiegazione": "Comunicazione non verbale riduce malintesi. Pratica intermedia[6].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Funzione 'thread' in Slack/Discord?",
+    "opzioni": [      "Organizza risposte correlate senza spam",
+      "Invio privato",
+      "Eliminazione messaggi",
+      "Notifiche silenziose"
+    ],
+    "rispostaCorretta": "Organizza risposte correlate senza spam",
+    "spiegazione": "Mantiene canali ordinati. Comunicazione evoluta[6].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Come configuri permessi cartella condivisa?",
+    "opzioni": [      "Solo lettura/modifica per ruoli specifici",
+      "Accesso totale tutti",
+      "Nessun permesso",
+      "Password singola"
+    ],
+    "rispostaCorretta": "Solo lettura/modifica per ruoli specifici",
+    "spiegazione": "Sicurezza collaborativa. Livello intermedio[6].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Quale canale per reclamo servizio digitale PA?",
+    "opzioni": [      "Difensore Civico Digitale prima di TAR",
+      "Social Twitter",
+      "Amico funzionario",
+      "TV locale"
+    ],
+    "rispostaCorretta": "Difensore Civico Digitale prima di TAR",
+    "spiegazione": "Procedura gerarchica diritti digitali. Syllabus intermedio[syllabus p.108].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Come integri feedback Asana progetto?",
+    "opzioni": [      "Aggiorna task descrizione e assegna responsabile",
+      "Nuova bacheca",
+      "Email catena",
+      "Chat generica"
+    ],
+    "rispostaCorretta": "Aggiorna task descrizione e assegna responsabile",
+    "spiegazione": "Tracciamento miglioramenti. Gestione progetti[2].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Differenza wiki vs documento condiviso?",
+    "opzioni": [      "Wiki: editing collaborativo pubblico; doc: privato",
+      "Nessuna differenza",
+      "Wiki solo testo",
+      "Doc solo immagini"
+    ],
+    "rispostaCorretta": "Wiki: editing collaborativo pubblico; doc: privato",
+    "spiegazione": "Scelta strumenti secondo scopo. DigComp 2.1[2][8].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Come gestisci overload notifiche team?",
+    "opzioni": [      "Imposta canali prioritari e mute secondari",
+      "Disattiva tutte",
+      "Cambia app",
+      "Ignora"
+    ],
+    "rispostaCorretta": "Imposta canali prioritari e mute secondari",
+    "spiegazione": "Produttività digitale. Pratica intermedia[6].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Quale strategia per discussione polarizzata?",
+    "opzioni": [      "Facilitatore sintetizza posizioni comuni",
+      "Voto maggioranza",
+      "Proroga decisione",
+      "Chiude discussione"
+    ],
+    "rispostaCorretta": "Facilitatore sintetizza posizioni comuni",
+    "spiegazione": "Costruisce consenso. Moderazione avanzata base-intermedio[1].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Vantaggio integrazione Zoom+Google Calendar?",
+    "opzioni": [      "Link riunione automatico negli inviti",
+      "Calendario cartaceo",
+      "Solo promemoria",
+      "Registrazione manuale"
+    ],
+    "rispostaCorretta": "Link riunione automatico negli inviti",
+    "spiegazione": "Efficienza pianificazione. Workflow intermedio[4].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+  {
+    "domanda": "Come documenti decisioni gruppo online?",
+    "opzioni": [      "Riassunto condiviso con azioni/tempi",
+      "Screenshot chat",
+      "Registrazione video completa",
+      "Email singoli"
+    ],
+    "rispostaCorretta": "Riassunto condiviso con azioni/tempi",
+    "spiegazione": "Repository centrale accessibile. Syllabus raccomandazione[syllabus p.58].",
+    "area": "Area 2",
+    "livello": "Intermedio"
+  },
+    {
+    "domanda": "Come risolvi conflitto culturale discussione multilingua?",
+    "opzioni": [      "Facilitatore usa traduzione automatica + regole condivise",
+      "Cambia lingua dominante",
+      "Esclude partecipanti",
+      "Solo emoji"
+    ],
+    "rispostaCorretta": "Facilitatore usa traduzione automatica + regole condivise",
+    "spiegazione": "Inclusività avanzata DigComp 2.2. Gestione diversità culturale[1][2].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Quale workflow ottimale integrazione Slack+Asana+Zoom?",
+    "opzioni": [      "Slack notifiche→Asana task→Zoom review periodici",
+      "Solo Slack tutto",
+      "Email catena",
+      "Riunioni quotidiane"
+    ],
+    "rispostaCorretta": "Slack notifiche→Asana task→Zoom review periodici",
+    "spiegazione": "Automazione flussi lavoro ibrido. Livello avanzato collaborazione[2][6].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Come analizzi efficacia discussione online?",
+    "opzioni": [      "Metriche: partecipazione equa, obiettivi raggiunti, sentiment",
+      "Solo numero messaggi",
+      "Opinione facilitatore",
+      "Tempo durata"
+    ],
+    "rispostaCorretta": "Metriche: partecipazione equa, obiettivi raggiunti, sentiment",
+    "spiegazione": "Valutazione quantitativa/qualitativa. Facilitazione avanzata[1][5].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Differenza protocollo RDP vs VPN per accesso remoto sicuro?",
+    "opzioni": [      "RDP: desktop remoto; VPN: tunnel sicuro generico",
+      "Nessuna differenza",
+      "RDP solo Windows",
+      "VPN solo mobile"
+    ],
+    "rispostaCorretta": "RDP: desktop remoto; VPN: tunnel sicuro generico",
+    "spiegazione": "Collaborazione remota sicura. DigComp sicurezza avanzata[1][9].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Come applichi GDPR consenso informato chat bot aziendale?",
+    "opzioni": [      "Banner esplicito + log consensi + diritto oblio",
+      "Accettazione implicita",
+      "Solo privacy policy",
+      "Nessun consenso"
+    ],
+    "rispostaCorretta": "Banner esplicito + log consensi + diritto oblio",
+    "spiegazione": "Compliance legale comunicazione digitale. Avanzato[1][4].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Strategia per burnout da overload comunicazioni digitali?",
+    "opzioni": [      "Policy 'no reply after hours' + dashboard centralizzato",
+      "Disattiva notifiche totali",
+      "Cambia lavoro",
+      "Ignora messaggi"
+    ],
+    "rispostaCorretta": "Policy 'no reply after hours' + dashboard centralizzato",
+    "spiegazione": "Gestione benessere digitale. Livello esperto[2][7].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Come configuri ruolo-based access Microsoft Teams?",
+    "opzioni": [      "Owner/Moderator/Member con permessi granulari canali",
+      "Accesso uguale tutti",
+      "Solo admin",
+      "Nessun controllo"
+    ],
+    "rispostaCorretta": "Owner/Moderator/Member con permessi granulari canali",
+    "spiegazione": "Sicurezza collaborativa enterprise. Avanzato[6].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Quale approccio per negoziazione complessa via videoconferenza?",
+    "opzioni": [      "Preparazione agenda condivisa + break caucus privati",
+      "Discussione libera",
+      "Voto online",
+      "Email parallela"
+    ],
+    "rispostaCorretta": "Preparazione agenda condivisa + break caucus privati",
+    "spiegazione": "Dinamiche gruppo avanzate. Facilitazione professionale[1].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Come integri IA facilitazione (es. sentiment analysis)?",
+    "opzioni": [      "Tool analizza tono → facilitatore interviene proattivamente",
+      "Sostituisce umano",
+      "Solo trascrizioni",
+      "Ignora IA"
+    ],
+    "rispostaCorretta": "Tool analizza tono → facilitatore interviene proattivamente",
+    "spiegazione": "IA supporta umani DigComp 2.2 emergenti[1][4].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Procedura escalation reclamo PA digitale fallito?",
+    "opzioni": [      "Difensore→AGID→TAR→Consiglio Stato",
+      "Social media",
+      "Prefetto",
+      "Sindaco"
+    ],
+    "rispostaCorretta": "Difensore→AGID→TAR→Consiglio Stato",
+    "spiegazione": "Gerarchia amministrativa/contenzioso. Cittadinanza attiva[3][6].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Come misuri ROI formazione digitale team remoto?",
+    "opzioni": [      "KPI: produttività pre/post + retention + feedback 360°",
+      "Solo certificati",
+      "Numero ore",
+      "Soddisfazione trainer"
+    ],
+    "rispostaCorretta": "KPI: produttività pre/post + retention + feedback 360°",
+    "spiegazione": "Valutazione impatto competenze. Avanzato professionale[2].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Configurazione federated identity per collaborazione inter-aziendale?",
+    "opzioni": [      "SAML/OIDC single sign-on tra domini",
+      "Password condivise",
+      "VPN manuale",
+      "Email forwarding"
+    ],
+    "rispostaCorretta": "SAML/OIDC single sign-on tra domini",
+    "spiegazione": "Autenticazione sicura ecosistemi. Livello esperto[9].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Strategia crisis communication digitale (es. data breach)?",
+    "opzioni": [      "Protocollo: informativa rapida + hotline + update trasparenti",
+      "Silenzio iniziale",
+      "Solo legale",
+      "Social virale"
+    ],
+    "rispostaCorretta": "Protocollo: informativa rapida + hotline + update trasparenti",
+    "spiegazione": "Gestione reputazione crisi. Comunicazione avanzata[1][7].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Come applichi design thinking sessioni remote collaborative?",
+    "opzioni": [      "Fasi: empathize→define→ideate→prototype→test via Miro/Teams",
+      "Solo brainstorming",
+      "Riunione unica",
+      "Questionario"
+    ],
+    "rispostaCorretta": "Fasi: empathize→define→ideate→prototype→test via Miro/Teams",
+    "spiegazione": "Metodologia strutturata innovazione digitale[2].",
+    "area": "Area 2",
+    "livello": "Avanzato"
+  },
+  {
+    "domanda": "Quale framework per etica IA in moderazione contenuti?",
+    "opzioni": [      "Trasparenza algoritmo + audit umano + appeal process",
+      "Automazione totale",
+      "Nessun framework",
+      "Solo policy generica"
+    ],
+    "rispostaCorretta": "Trasparenza algoritmo + audit umano + appeal process",
+    "spiegazione": "Responsabilità piattaforme DigComp 2.2[1][4].",
+    "area": "Area 2",
+    "livello": "Avanzato"
   }
       ];
 let domandeSelezionate = []; // Le 30 domande per il quiz corrente
